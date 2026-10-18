@@ -37,8 +37,9 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
         // Glitter path: width grows toward the viewer, broken by wave facets.
         float width = 0.015 + 0.35 * dy;
         float path = exp(-pow((p.x - moon.x) / width, 2.0));
-        vec2 g = vec2(p.x * 260.0 / (1.0 + dy * 6.0), p.y * 420.0 / (1.0 + dy * 6.0) + t * 2.0);
-        float facet = step(0.62, hash12(floor(g))) * (0.6 + 0.4 * sin(t * 3.0 + hash12(floor(g)) * 30.0));
+        vec2 g = vec2(p.x * 60.0 + 0.5 * sin(p.y * 80.0 + t), p.y * 300.0 + t * 2.0);
+        float facet = step(0.6, hash12(floor(g))) * smoothstep(0.5, 0.15, abs(fract(g.y) - 0.5)) * smoothstep(0.5, 0.3, abs(fract(g.x) - 0.5))
+                    * (0.6 + 0.4 * sin(t * 3.0 + hash12(floor(g)) * 30.0));
         col += GFX_ACCENT * path * (0.15 + facet * 0.9);
         col = mix(col, GFX_SECONDARY, smoothstep(10.0, 45.0, z) * 0.7);
     }
