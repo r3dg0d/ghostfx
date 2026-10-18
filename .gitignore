@@ -9,3 +9,7 @@ __pycache__/
 /result-*
 .direnv/
 *.log
+/website/public/data/
+/website/lib/generated/
+/website/next-env.d.ts
+/website/tsconfig.tsbuildinfo
