@@ -21,7 +21,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float lr = log(r + 1e-3) * P_RINGS * 0.25 + t * 0.6;
     float ring = floor(lr);
     float fr = fract(lr) - 0.5;
-    float slots = 18.0 + 6.0 * hash11(ring);
+    float slots = floor(18.0 + 6.0 * hash11(ring));
     float omega = 0.35 / (r + 0.08);
     float ang = (a + t * omega) / 6.2831 * slots + hash11(ring * 3.1) * 10.0;
     float sid = floor(ang);

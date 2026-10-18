@@ -19,7 +19,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float r = length(p);
     float a = atan(p.y, p.x);
     float spiral = a * P_ARMS / 6.2831 + log(r + 0.02) * P_TWIST * 0.5 + t * 0.35;
-    vec2 q = vec2(spiral * 3.0, r * 5.0 - t * 1.4);
+    // Noise is sampled in swirled Cartesian space (no atan() seam).
+    vec2 q = gfx_rot(log(r + 0.02) * P_TWIST * 0.5 + t * 0.35) * p * 4.0 + vec2(0.0, -t * 0.8);
     float n = fbm(q + fbm(q * 1.5 + t * 0.2));
     float arms = 0.5 + 0.5 * sin(spiral * 6.2831);
     float heat = n * (0.6 + 0.6 * arms) * (1.2 - r * 0.9) + 0.35 * exp(-r * 6.0);

@@ -22,7 +22,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float a = atan(q.y, q.x);
     vec2 w = vec2(q.x * 3.0 + 0.4 * sin(q.y * 6.0 + t), q.y * 2.0 - t * 0.25);
     w += 0.5 * vec2(fbm(w + t * 0.15), fbm(w * 1.3 - t * 0.1));
-    float n = fbm(w * 1.6 + vec2(a * 0.3, r));
+    float n = fbm(w * 1.6 + vec2(q.y * 0.3, r));
     float streak = 0.5 + 0.5 * sin(q.x * 25.0 + n * 9.0 + t * 1.5);
     float v = n * 0.75 + streak * 0.35;
     v = floor(v * 6.0) / 6.0;   // quantised palette, like a 16px texture

@@ -20,7 +20,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 e2 = half_ - abs(p);
     float e = min(e2.x, e2.y);
     // Coordinate running around the frame so flames flow along it.
-    float around = atan(p.y, p.x / gfx_aspect()) * 3.0;
+    float around = (p.x + p.y) * 2.0;
 
     vec2 q = vec2(around * 2.0 + 0.3 * sin(t * 0.3), e / P_REACH * 2.0 - t * 1.4);
     q += 0.7 * vec2(fbm(q + t * 0.2), fbm(q + 5.0 - t * 0.15));
