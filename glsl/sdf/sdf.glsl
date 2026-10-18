@@ -46,6 +46,20 @@ float sd_star5(vec2 p, float r, float rf) {
     return length(p - ba * h) * sign(p.y * ba.x - p.x * ba.y);
 }
 
+// Hexagonal tiling with cell spacing (1, sqrt(3)). Returns the local cell
+// coordinate in .xy and the cell centre in .zw. hex_edge() is 0.5 on borders.
+vec4 hex_tile(vec2 p) {
+    const vec2 s = vec2(1.0, 1.7320508);
+    vec2 a = mod(p, s) - s * 0.5;
+    vec2 b = mod(p - s * 0.5, s) - s * 0.5;
+    vec2 g = dot(a, a) < dot(b, b) ? a : b;
+    return vec4(g, p - g);
+}
+float hex_edge(vec2 g) {
+    g = abs(g);
+    return max(dot(g, vec2(0.5, 0.8660254)), g.x);
+}
+
 // Smooth minimum for blending blobs.
 float smin(float a, float b, float k) {
     float h = clamp(0.5 + 0.5 * (b - a) / k, 0.0, 1.0);

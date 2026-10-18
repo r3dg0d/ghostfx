@@ -23,10 +23,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
     // Hex lattice.
     vec2 h = p * 14.0;
-    vec2 r = vec2(1.0, 1.732);
-    vec2 a = mod(h, r) - r * 0.5, b = mod(h - r * 0.5, r) - r * 0.5;
-    vec2 g = dot(a, a) < dot(b, b) ? a : b;
-    col += GFX_ACCENT * smoothstep(0.05, 0.0, abs(sd_hexagon(g, 0.45))) * 0.08;
+    col += GFX_ACCENT * smoothstep(0.05, 0.0, 0.5 - hex_edge(hex_tile(h).xy)) * 0.08;
 
     // Rings around an off-centre focus.
     vec2 c = p - vec2(0.45 * gfx_aspect() * 0.5, 0.05);
