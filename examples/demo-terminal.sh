@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Prints representative terminal content for previews and readability checks.
+printf '\033[1;35m❯\033[0m \033[36mghostfx\033[0m apply ender-portal --preset balanced\n'
+printf '\033[32m✓\033[0m built \033[1mender-portal\033[0m (balanced) → ~/.config/ghostty/ghostfx/shaders/ender-portal.glsl\n'
+printf '\033[32m✓\033[0m backup  ~/.config/ghostty/ghostfx/backups/config.20261018-120000\n\n'
+printf '\033[1;35m❯\033[0m \033[36mls\033[0m -la src/\n'
+printf 'drwxr-xr-x  5 user user 4096 Oct 18 12:00 \033[1;34m.\033[0m\n'
+printf -- '-rw-r--r--  1 user user 2311 Oct 18 12:00 main.rs\n'
+printf -- '-rwxr-xr-x  1 user user  873 Oct 18 12:00 \033[1;32mbuild.sh\033[0m\n\n'
+printf '\033[1;35m❯\033[0m \033[36mcat\033[0m src/main.rs\n'
+printf '\033[35mfn\033[0m \033[34mmain\033[0m() {\n'
+printf '    \033[35mlet\033[0m frames = \033[33m60\033[0m;\n'
+printf '    \033[35mfor\033[0m i \033[35min\033[0m \033[33m0\033[0m..frames {\n'
+printf '        println!(\033[32m"frame {i}: the terminal is alive"\033[0m);\n'
+printf '    }\n}\n\n'
+printf '\033[1;35m❯\033[0m \033[36mcargo\033[0m test\n'
+printf '   \033[1;32mCompiling\033[0m ghostfx-demo v0.1.0\n'
+printf '    \033[1;32mFinished\033[0m test [unoptimized] target(s) in 1.42s\n'
+printf 'test result: \033[32mok\033[0m. 42 passed; \033[31m0 failed\033[0m\n\n'
+printf '\033[1;35m❯\033[0m '
+sleep "${1:-3600}"

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+/build/
+/dist-release/
+/website/node_modules/
+/website/.next/
+/website/out/
+/result
+/result-*
+.direnv/
+*.log
