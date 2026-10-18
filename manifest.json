@@ -5,7 +5,7 @@
   "project": "GhostFX",
   "repository": "https://github.com/r3dg0d/ghostfx",
   "license": "MIT",
-  "shader_count": 216,
+  "shader_count": 253,
   "common_parameters": [
     {
       "name": "INTENSITY",
@@ -127,7 +127,7 @@
     },
     "particles": {
       "name": "Particles",
-      "count": 14
+      "count": 16
     },
     "minecraft": {
       "name": "Minecraft-Inspired",
@@ -135,15 +135,15 @@
     },
     "crt": {
       "name": "CRT & Retro Displays",
-      "count": 18
+      "count": 21
     },
     "glitch": {
       "name": "Glitch & Corruption",
-      "count": 12
+      "count": 15
     },
     "alien": {
       "name": "Alien & Sci-Fi",
-      "count": 13
+      "count": 15
     },
     "space": {
       "name": "Space & Cosmos",
@@ -151,19 +151,19 @@
     },
     "glass": {
       "name": "Glass & Glossy",
-      "count": 12
+      "count": 17
     },
     "electric": {
       "name": "Electricity & Energy",
-      "count": 14
+      "count": 18
     },
     "metallic": {
       "name": "Metallic & Industrial",
-      "count": 12
+      "count": 15
     },
     "cyberpunk": {
       "name": "Cyberpunk",
-      "count": 11
+      "count": 13
     },
     "matrix": {
       "name": "Matrix & Code",
@@ -171,26 +171,109 @@
     },
     "nature": {
       "name": "Nature & Atmosphere",
-      "count": 15
+      "count": 19
     },
     "liquid": {
       "name": "Liquid Art",
-      "count": 4
+      "count": 5
     },
     "geometric": {
       "name": "Geometric Art",
-      "count": 8
+      "count": 11
     },
     "portals": {
       "name": "Experimental Portals",
-      "count": 6
+      "count": 7
     },
     "experimental": {
       "name": "Experimental",
-      "count": 12
+      "count": 16
     }
   },
   "shaders": [
+    {
+      "id": "alien-artifact",
+      "name": "Alien Artifact",
+      "category": "alien",
+      "category_name": "Alien & Sci-Fi",
+      "description": "A black monolith floats above a dim plain, its surface lit by slowly scrolling runes and a cold light sweeping its edges.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/alien/alien-artifact.glsl",
+      "dist": "dist/alien/alien-artifact.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 0,
+      "tags": [
+        "monolith",
+        "artifact",
+        "alien",
+        "runes",
+        "mysterious"
+      ],
+      "colors": {
+        "PRIMARY": "#6BFFE0",
+        "SECONDARY": "#020405",
+        "ACCENT": "#C2D6FF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "hash",
+        "sdf",
+        "fbm"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
     {
       "id": "alien-interface",
       "name": "Alien Interface",
@@ -227,7 +310,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 0,
+      "order": 1,
       "tags": [
         "alien",
         "hud",
@@ -311,7 +394,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 1,
+      "order": 2,
       "tags": [
         "alien",
         "glyphs",
@@ -405,7 +488,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 2,
+      "order": 3,
       "tags": [
         "alien",
         "planet",
@@ -489,7 +572,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 3,
+      "order": 4,
       "tags": [
         "radar",
         "alien",
@@ -583,7 +666,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 4,
+      "order": 5,
       "tags": [
         "alien",
         "circuits",
@@ -676,7 +759,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 5,
+      "order": 6,
       "tags": [
         "alien",
         "biomechanical",
@@ -759,7 +842,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 6,
+      "order": 7,
       "tags": [
         "organic",
         "cells",
@@ -842,7 +925,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 7,
+      "order": 8,
       "tags": [
         "eye",
         "cyborg",
@@ -925,7 +1008,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 8,
+      "order": 9,
       "tags": [
         "portal",
         "alien",
@@ -1008,7 +1091,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 9,
+      "order": 10,
       "tags": [
         "alien",
         "signal",
@@ -1059,6 +1142,87 @@
       }
     },
     {
+      "id": "holo-projector",
+      "name": "Holo Projector",
+      "category": "alien",
+      "category_name": "Alien & Sci-Fi",
+      "description": "A retro holographic projector beams a flickering, scanlined wireframe globe above its lens, rotating slowly.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/alien/holo-projector.glsl",
+      "dist": "dist/alien/holo-projector.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": true,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 11,
+      "tags": [
+        "hologram",
+        "projector",
+        "wireframe",
+        "globe",
+        "sci-fi",
+        "blue"
+      ],
+      "colors": {
+        "PRIMARY": "#5CC8FF",
+        "SECONDARY": "#03060B",
+        "ACCENT": "#E0F6FF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "holographic-scanner",
       "name": "Holographic Scanner",
       "category": "alien",
@@ -1094,7 +1258,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 10,
+      "order": 12,
       "tags": [
         "scanner",
         "hologram",
@@ -1186,7 +1350,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 11,
+      "order": 13,
       "tags": [
         "ufo",
         "beam",
@@ -1279,7 +1443,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 12,
+      "order": 14,
       "tags": [
         "alien",
         "dark",
@@ -1362,7 +1526,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 13,
+      "order": 15,
       "tags": [
         "crt",
         "amber",
@@ -1454,7 +1618,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 14,
+      "order": 16,
       "tags": [
         "crt",
         "blue",
@@ -1552,7 +1716,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 15,
+      "order": 17,
       "tags": [
         "crt",
         "retro",
@@ -1671,7 +1835,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 16,
+      "order": 18,
       "tags": [
         "crt",
         "arcade",
@@ -1774,7 +1938,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 17,
+      "order": 19,
       "tags": [
         "crt",
         "bloom",
@@ -1874,7 +2038,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 18,
+      "order": 20,
       "tags": [
         "crt",
         "broken",
@@ -1972,7 +2136,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 19,
+      "order": 21,
       "tags": [
         "crt",
         "flicker",
@@ -2075,7 +2239,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 20,
+      "order": 22,
       "tags": [
         "crt",
         "glitch",
@@ -2176,7 +2340,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 21,
+      "order": 23,
       "tags": [
         "crt",
         "interlaced",
@@ -2241,6 +2405,90 @@
       }
     },
     {
+      "id": "crt-power",
+      "name": "CRT Power",
+      "category": "crt",
+      "category_name": "CRT & Retro Displays",
+      "description": "An old tube that powers down when the window loses focus, collapsing to a glowing line and dot, then bursts back on when you return.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/crt/crt-power.glsl",
+      "dist": "dist/crt/crt-power.glsl",
+      "mode": "post",
+      "animated": true,
+      "flashing": true,
+      "distorts_text": true,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 24,
+      "tags": [
+        "crt",
+        "power",
+        "focus",
+        "retro",
+        "animation",
+        "tube"
+      ],
+      "colors": {
+        "PRIMARY": "#8B5CF6",
+        "SECONDARY": "#4C1D95",
+        "ACCENT": "#C084FC",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "crt"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "focus-uniforms"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [
+        "Ghostty only redraws unfocused terminals when their content changes, unless custom-shader-animation = always."
+      ],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "crt-rgb-mask",
       "name": "CRT RGB Mask",
       "category": "crt",
@@ -2276,7 +2524,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 22,
+      "order": 25,
       "tags": [
         "crt",
         "rgb",
@@ -2378,7 +2626,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 23,
+      "order": 26,
       "tags": [
         "crt",
         "static",
@@ -2481,7 +2729,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 24,
+      "order": 27,
       "tags": [
         "crt",
         "1980s",
@@ -2577,7 +2825,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 25,
+      "order": 28,
       "tags": [
         "vhs",
         "tape",
@@ -2683,7 +2931,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 26,
+      "order": 29,
       "tags": [
         "crt",
         "curved",
@@ -2795,7 +3043,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 27,
+      "order": 30,
       "tags": [
         "crt",
         "green",
@@ -2852,6 +3100,88 @@
       }
     },
     {
+      "id": "oscilloscope",
+      "name": "Oscilloscope",
+      "category": "crt",
+      "category_name": "CRT & Retro Displays",
+      "description": "An old monochrome oscilloscope tracing slowly morphing Lissajous figures in glowing green over its graticule.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/crt/oscilloscope.glsl",
+      "dist": "dist/crt/oscilloscope.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 31,
+      "tags": [
+        "oscilloscope",
+        "lissajous",
+        "green",
+        "retro",
+        "science",
+        "phosphor"
+      ],
+      "colors": {
+        "PRIMARY": "#6BFF8F",
+        "SECONDARY": "#020703",
+        "ACCENT": "#D8FFE0",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "sdf"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "retro-dos",
       "name": "Retro DOS",
       "category": "crt",
@@ -2887,7 +3217,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 28,
+      "order": 32,
       "tags": [
         "dos",
         "retro",
@@ -2967,7 +3297,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 29,
+      "order": 33,
       "tags": [
         "radar",
         "phosphor",
@@ -3025,6 +3355,87 @@
       "previews": {}
     },
     {
+      "id": "test-pattern",
+      "name": "Test Pattern",
+      "category": "crt",
+      "category_name": "CRT & Retro Displays",
+      "description": "An analog broadcast test card glowing faintly behind the text: colour bars, a grey ramp, a convergence grid and a centring circle.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/crt/test-pattern.glsl",
+      "dist": "dist/crt/test-pattern.glsl",
+      "mode": "background",
+      "animated": false,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 34,
+      "tags": [
+        "test-pattern",
+        "broadcast",
+        "retro",
+        "tv",
+        "bars"
+      ],
+      "colors": {
+        "PRIMARY": "#8B5CF6",
+        "SECONDARY": "#4C1D95",
+        "ACCENT": "#C084FC",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "sdf",
+        "color"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "vhs-horror",
       "name": "VHS Horror",
       "category": "crt",
@@ -3060,7 +3471,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 30,
+      "order": 35,
       "tags": [
         "vhs",
         "horror",
@@ -3143,7 +3554,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 31,
+      "order": 36,
       "tags": [
         "hud",
         "cockpit",
@@ -3225,7 +3636,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 32,
+      "order": 37,
       "tags": [
         "rain",
         "neon",
@@ -3308,7 +3719,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 33,
+      "order": 38,
       "tags": [
         "hud",
         "cyberpunk",
@@ -3392,7 +3803,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 34,
+      "order": 39,
       "tags": [
         "cyberpunk",
         "city",
@@ -3475,7 +3886,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 35,
+      "order": 40,
       "tags": [
         "tunnel",
         "cyber",
@@ -3532,6 +3943,92 @@
       }
     },
     {
+      "id": "keyboard-glow",
+      "name": "Keyboard Glow",
+      "category": "cyberpunk",
+      "category_name": "Cyberpunk",
+      "description": "A holographic keyboard glows along the bottom of the window, keys lighting up in ripples every time you type.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/cyberpunk/keyboard-glow.glsl",
+      "dist": "dist/cyberpunk/keyboard-glow.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 41,
+      "tags": [
+        "keyboard",
+        "hologram",
+        "typing",
+        "reactive",
+        "rgb",
+        "cursor"
+      ],
+      "colors": {
+        "PRIMARY": "#3DE0FF",
+        "SECONDARY": "#04050A",
+        "ACCENT": "#FF3DD2",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "hash",
+        "sdf",
+        "color"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [
+        "Reacts to cursor movement (Ghostty 1.2+), which is the closest proxy for key presses a shader can see."
+      ],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "neon-grid",
       "name": "Neon Grid",
       "category": "cyberpunk",
@@ -3567,7 +4064,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 36,
+      "order": 42,
       "tags": [
         "grid",
         "neon",
@@ -3669,7 +4166,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 37,
+      "order": 43,
       "tags": [
         "neon",
         "border",
@@ -3772,7 +4269,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 38,
+      "order": 44,
       "tags": [
         "cyberspace",
         "purple",
@@ -3856,7 +4353,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 39,
+      "order": 45,
       "tags": [
         "smoke",
         "purple",
@@ -3936,7 +4433,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 40,
+      "order": 46,
       "tags": [
         "retrowave",
         "waves",
@@ -4028,7 +4525,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 41,
+      "order": 47,
       "tags": [
         "synthwave",
         "sunset",
@@ -4079,6 +4576,86 @@
       }
     },
     {
+      "id": "vaporwave-clouds",
+      "name": "Vaporwave Clouds",
+      "category": "cyberpunk",
+      "category_name": "Cyberpunk",
+      "description": "Pastel pink-and-teal clouds drift across a lilac sky behind scanlines and a hazy setting sun. Pure aesthetic.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/cyberpunk/vaporwave-clouds.glsl",
+      "dist": "dist/cyberpunk/vaporwave-clouds.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 48,
+      "tags": [
+        "vaporwave",
+        "pastel",
+        "clouds",
+        "aesthetic",
+        "retro"
+      ],
+      "colors": {
+        "PRIMARY": "#FF9AD5",
+        "SECONDARY": "#2A1F4A",
+        "ACCENT": "#7FE7E0",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "fbm"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "circuit-growth",
       "name": "Circuit Growth",
       "category": "electric",
@@ -4114,7 +4691,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 42,
+      "order": 49,
       "tags": [
         "circuit",
         "growth",
@@ -4142,6 +4719,87 @@
       ],
       "modules": [
         "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "containment-field",
+      "name": "Containment Field",
+      "category": "electric",
+      "category_name": "Electricity & Energy",
+      "description": "A writhing ball of energy held inside a cage of glowing field rings that tighten and flex whenever it pushes outward.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/electric/containment-field.glsl",
+      "dist": "dist/electric/containment-field.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 50,
+      "tags": [
+        "containment",
+        "field",
+        "energy",
+        "rings",
+        "sci-fi",
+        "plasma"
+      ],
+      "colors": {
+        "PRIMARY": "#5CF2FF",
+        "SECONDARY": "#020509",
+        "ACCENT": "#FF6BE0",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "fbm"
       ],
       "required_capabilities": [
         "terminal-texture",
@@ -4204,7 +4862,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 43,
+      "order": 51,
       "tags": [
         "electric",
         "arcs",
@@ -4299,7 +4957,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 44,
+      "order": 52,
       "tags": [
         "electric",
         "blue",
@@ -4381,7 +5039,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 45,
+      "order": 53,
       "tags": [
         "pcb",
         "circuit",
@@ -4473,7 +5131,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 46,
+      "order": 54,
       "tags": [
         "electric",
         "purple",
@@ -4565,7 +5223,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 47,
+      "order": 55,
       "tags": [
         "storm",
         "lightning",
@@ -4648,7 +5306,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 48,
+      "order": 56,
       "tags": [
         "physics",
         "field",
@@ -4740,7 +5398,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 49,
+      "order": 57,
       "tags": [
         "shield",
         "hexagon",
@@ -4834,7 +5492,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 50,
+      "order": 58,
       "tags": [
         "plasma",
         "ionized",
@@ -4917,7 +5575,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 51,
+      "order": 59,
       "tags": [
         "lightning",
         "storm",
@@ -5012,7 +5670,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 52,
+      "order": 60,
       "tags": [
         "neon",
         "current",
@@ -5105,7 +5763,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 53,
+      "order": 61,
       "tags": [
         "neural",
         "network",
@@ -5140,6 +5798,98 @@
         "terminal-texture",
         "animation",
         "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "plasma-globe",
+      "name": "Plasma Globe",
+      "category": "electric",
+      "category_name": "Electricity & Energy",
+      "description": "A plasma ball: violet filaments writhe from a glowing core to the inside of the glass sphere, flickering and branching.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/electric/plasma-globe.glsl",
+      "dist": "dist/electric/plasma-globe.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": true,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 62,
+      "tags": [
+        "plasma",
+        "globe",
+        "tesla",
+        "purple",
+        "filaments",
+        "electric"
+      ],
+      "colors": {
+        "PRIMARY": "#C26BFF",
+        "SECONDARY": "#040208",
+        "ACCENT": "#FFC2F5",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "FILAMENTS",
+          "type": "int",
+          "default": 8,
+          "min": 3,
+          "max": 14,
+          "description": "Number of filaments",
+          "common": false
+        }
+      ],
+      "modules": [
+        "gradient",
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
       ],
       "min_ghostty": "1.3.0",
       "legacy_build": "1.2.0",
@@ -5198,7 +5948,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 54,
+      "order": 63,
       "tags": [
         "grid",
         "network",
@@ -5257,6 +6007,171 @@
       }
     },
     {
+      "id": "purple-lightning",
+      "name": "Purple Lightning",
+      "category": "electric",
+      "category_name": "Electricity & Energy",
+      "description": "A violet storm where branching bolts crawl sideways across the whole sky, lighting the clouds magenta.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/electric/purple-lightning.glsl",
+      "dist": "dist/electric/purple-lightning.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": true,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 64,
+      "tags": [
+        "lightning",
+        "purple",
+        "storm",
+        "electric",
+        "dramatic"
+      ],
+      "colors": {
+        "PRIMARY": "#D29BFF",
+        "SECONDARY": "#07030E",
+        "ACCENT": "#7A2EFF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "fbm",
+        "hash",
+        "sdf",
+        "gradient"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "reactor-core",
+      "name": "Reactor Core",
+      "category": "electric",
+      "category_name": "Electricity & Energy",
+      "description": "A fusion reactor seen edge-on: magnetic confinement rings spin around a blinding plasma core that pulses with power.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/electric/reactor-core.glsl",
+      "dist": "dist/electric/reactor-core.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 65,
+      "tags": [
+        "reactor",
+        "fusion",
+        "plasma",
+        "rings",
+        "sci-fi",
+        "orange"
+      ],
+      "colors": {
+        "PRIMARY": "#FF8A2E",
+        "SECONDARY": "#040304",
+        "ACCENT": "#6BD5FF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "fbm"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "tesla-coil",
       "name": "Tesla Coil",
       "category": "electric",
@@ -5292,7 +6207,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 55,
+      "order": 66,
       "tags": [
         "tesla",
         "electric",
@@ -5387,7 +6302,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 56,
+      "order": 67,
       "tags": [
         "boot",
         "bios",
@@ -5421,6 +6336,98 @@
         "terminal-texture",
         "animation",
         "focus-uniforms"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "console-startup",
+      "name": "Console Startup",
+      "category": "experimental",
+      "category_name": "Experimental",
+      "description": "A retro games-console boot: a chrome emblem drops in, flashes once, and shimmers before settling into the background.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/experimental/console-startup.glsl",
+      "dist": "dist/experimental/console-startup.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": true,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 68,
+      "tags": [
+        "console",
+        "startup",
+        "retro",
+        "boot",
+        "logo",
+        "90s"
+      ],
+      "colors": {
+        "PRIMARY": "#B8C4FF",
+        "SECONDARY": "#05060C",
+        "ACCENT": "#FF5C8A",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "CYCLE",
+          "type": "float",
+          "default": 12.0,
+          "min": 4.0,
+          "max": 60.0,
+          "description": "Seconds between startup sequences",
+          "common": false
+        }
+      ],
+      "modules": [
+        "sdf"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
       ],
       "min_ghostty": "1.3.0",
       "legacy_build": "1.2.0",
@@ -5479,7 +6486,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 57,
+      "order": 69,
       "tags": [
         "ecg",
         "heartbeat",
@@ -5571,7 +6578,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 58,
+      "order": 70,
       "tags": [
         "dna",
         "helix",
@@ -5651,7 +6658,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 59,
+      "order": 71,
       "tags": [
         "ghost",
         "spectre",
@@ -5734,7 +6741,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 60,
+      "order": 72,
       "tags": [
         "haunted",
         "ghost",
@@ -5758,6 +6765,89 @@
       "required_capabilities": [
         "terminal-texture",
         "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "holo-ghost",
+      "name": "Holographic Ghost",
+      "category": "experimental",
+      "category_name": "Experimental",
+      "description": "A glitching holographic figure flickers in the corner of the screen: a scanlined bust that tears, splits and re-forms.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/experimental/holo-ghost.glsl",
+      "dist": "dist/experimental/holo-ghost.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": true,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 73,
+      "tags": [
+        "hologram",
+        "ghost",
+        "glitch",
+        "figure",
+        "cyan",
+        "sci-fi"
+      ],
+      "colors": {
+        "PRIMARY": "#5CF0FF",
+        "SECONDARY": "#02060A",
+        "ACCENT": "#FF4FD0",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "sdf",
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
       ],
       "min_ghostty": "1.3.0",
       "legacy_build": "1.2.0",
@@ -5816,7 +6906,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 61,
+      "order": 74,
       "tags": [
         "cold",
         "vapour",
@@ -5835,6 +6925,96 @@
       "parameters": [],
       "modules": [
         "fbm",
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "nanotech-assembly",
+      "name": "Nanotech Assembly",
+      "category": "experimental",
+      "category_name": "Experimental",
+      "description": "Voxels fly in and lock into place, assembling a glowing lattice structure layer by layer before it dissolves and rebuilds.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/experimental/nanotech-assembly.glsl",
+      "dist": "dist/experimental/nanotech-assembly.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 75,
+      "tags": [
+        "nanotech",
+        "voxels",
+        "assembly",
+        "cyan",
+        "sci-fi"
+      ],
+      "colors": {
+        "PRIMARY": "#4DE6FF",
+        "SECONDARY": "#03060A",
+        "ACCENT": "#FFFFFF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "CYCLE",
+          "type": "float",
+          "default": 16.0,
+          "min": 6.0,
+          "max": 60.0,
+          "description": "Seconds per build",
+          "common": false
+        }
+      ],
+      "modules": [
         "hash"
       ],
       "required_capabilities": [
@@ -5898,7 +7078,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 62,
+      "order": 76,
       "tags": [
         "veins",
         "organic",
@@ -5979,7 +7159,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 63,
+      "order": 77,
       "tags": [
         "reactor",
         "nuclear",
@@ -6061,7 +7241,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 64,
+      "order": 78,
       "tags": [
         "oled",
         "black",
@@ -6143,7 +7323,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 65,
+      "order": 79,
       "tags": [
         "quantum",
         "foam",
@@ -6224,7 +7404,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 66,
+      "order": 80,
       "tags": [
         "radiation",
         "geiger",
@@ -6253,6 +7433,87 @@
       "modules": [
         "hash",
         "value"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "spectral-rainbow",
+      "name": "Spectral Rainbow",
+      "category": "experimental",
+      "category_name": "Experimental",
+      "description": "Soft bands of pure spectral colour flow diagonally across the screen like light split by a prism, dim enough to work behind code.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/experimental/spectral-rainbow.glsl",
+      "dist": "dist/experimental/spectral-rainbow.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 81,
+      "tags": [
+        "rainbow",
+        "spectrum",
+        "colorful",
+        "soft",
+        "gradient"
+      ],
+      "colors": {
+        "PRIMARY": "#8B5CF6",
+        "SECONDARY": "#4C1D95",
+        "ACCENT": "#C084FC",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "gradient",
+        "color"
       ],
       "required_capabilities": [
         "terminal-texture",
@@ -6315,7 +7576,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 67,
+      "order": 82,
       "tags": [
         "reactive",
         "cursor",
@@ -6398,7 +7659,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 68,
+      "order": 83,
       "tags": [
         "fire",
         "blue",
@@ -6500,7 +7761,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 69,
+      "order": 84,
       "tags": [
         "fire",
         "embers",
@@ -6593,7 +7854,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 70,
+      "order": 85,
       "tags": [
         "fire",
         "green",
@@ -6686,7 +7947,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 71,
+      "order": 86,
       "tags": [
         "heat",
         "distortion",
@@ -6788,7 +8049,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 72,
+      "order": 87,
       "tags": [
         "fire",
         "hell",
@@ -6874,7 +8135,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 73,
+      "order": 88,
       "tags": [
         "fire",
         "vortex",
@@ -6975,7 +8236,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 74,
+      "order": 89,
       "tags": [
         "lava",
         "molten",
@@ -7068,7 +8329,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 75,
+      "order": 90,
       "tags": [
         "molten",
         "cracks",
@@ -7151,7 +8412,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 76,
+      "order": 91,
       "tags": [
         "plasma",
         "energy",
@@ -7234,7 +8495,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 77,
+      "order": 92,
       "tags": [
         "fire",
         "purple",
@@ -7337,7 +8598,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 78,
+      "order": 93,
       "tags": [
         "fire",
         "flames",
@@ -7430,7 +8691,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 79,
+      "order": 94,
       "tags": [
         "sun",
         "plasma",
@@ -7480,6 +8741,180 @@
       }
     },
     {
+      "id": "blueprint",
+      "name": "Blueprint",
+      "category": "geometric",
+      "category_name": "Geometric Art",
+      "description": "Engineering blueprint paper: a fine cyan grid on deep blue, with circles, arcs and dimension lines drafting themselves in white.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/geometric/blueprint.glsl",
+      "dist": "dist/geometric/blueprint.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 95,
+      "tags": [
+        "blueprint",
+        "technical",
+        "drawing",
+        "grid",
+        "blue",
+        "engineering"
+      ],
+      "colors": {
+        "PRIMARY": "#E8F2FF",
+        "SECONDARY": "#0A2A5C",
+        "ACCENT": "#4FA3E8",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "CYCLE",
+          "type": "float",
+          "default": 20.0,
+          "min": 6.0,
+          "max": 60.0,
+          "description": "Seconds per drawing",
+          "common": false
+        }
+      ],
+      "modules": [
+        "sdf",
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "fractal-flames",
+      "name": "Fractal Flames",
+      "category": "geometric",
+      "category_name": "Geometric Art",
+      "description": "Wispy, luminous filaments in the style of fractal-flame art, woven by iterating swirl and sinusoidal variations.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/geometric/fractal-flames.glsl",
+      "dist": "dist/geometric/fractal-flames.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 96,
+      "tags": [
+        "fractal",
+        "flame",
+        "ifs",
+        "glow",
+        "colorful",
+        "abstract"
+      ],
+      "colors": {
+        "PRIMARY": "#FF7A2E",
+        "SECONDARY": "#050307",
+        "ACCENT": "#6E5BFF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "color"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "fractal-zoom",
       "name": "Fractal Zoom",
       "category": "geometric",
@@ -7515,7 +8950,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 80,
+      "order": 97,
       "tags": [
         "fractal",
         "mandelbrot",
@@ -7609,7 +9044,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 81,
+      "order": 98,
       "tags": [
         "hexagon",
         "grid",
@@ -7668,6 +9103,103 @@
       }
     },
     {
+      "id": "hypnotic-spiral",
+      "name": "Hypnotic Spiral",
+      "category": "geometric",
+      "category_name": "Geometric Art",
+      "description": "A slowly turning Archimedean spiral in two soft tones that seems to pull the eye inward. Gentle by default.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/geometric/hypnotic-spiral.glsl",
+      "dist": "dist/geometric/hypnotic-spiral.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 99,
+      "tags": [
+        "spiral",
+        "hypnotic",
+        "optical",
+        "minimal",
+        "rotating"
+      ],
+      "colors": {
+        "PRIMARY": "#6E5BFF",
+        "SECONDARY": "#0B0916",
+        "ACCENT": "#FF7AC6",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "ARMS",
+          "type": "float",
+          "default": 2.0,
+          "min": 1.0,
+          "max": 6.0,
+          "description": "Spiral arms",
+          "common": false
+        },
+        {
+          "name": "TIGHTNESS",
+          "type": "float",
+          "default": 18.0,
+          "min": 6.0,
+          "max": 40.0,
+          "description": "Turns density",
+          "common": false
+        }
+      ],
+      "modules": [],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "infinite-tunnel",
       "name": "Infinite Tunnel",
       "category": "geometric",
@@ -7703,7 +9235,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 82,
+      "order": 100,
       "tags": [
         "tunnel",
         "demoscene",
@@ -7795,7 +9327,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 83,
+      "order": 101,
       "tags": [
         "fractal",
         "julia",
@@ -7877,7 +9409,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 84,
+      "order": 102,
       "tags": [
         "kaleidoscope",
         "symmetry",
@@ -7971,7 +9503,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 85,
+      "order": 103,
       "tags": [
         "fractal",
         "mandelbrot",
@@ -8063,7 +9595,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 86,
+      "order": 104,
       "tags": [
         "geometry",
         "sacred",
@@ -8157,7 +9689,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 87,
+      "order": 105,
       "tags": [
         "voronoi",
         "cells",
@@ -8215,6 +9747,180 @@
       }
     },
     {
+      "id": "black-ice",
+      "name": "Black Ice",
+      "category": "glass",
+      "category_name": "Glass & Glossy",
+      "description": "Dark, glassy ice with trapped bubbles and hairline fractures, a slow sheen of reflected light sliding over its surface.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/glass/black-ice.glsl",
+      "dist": "dist/glass/black-ice.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 106,
+      "tags": [
+        "ice",
+        "black",
+        "dark",
+        "glossy",
+        "bubbles",
+        "subtle"
+      ],
+      "colors": {
+        "PRIMARY": "#9EC9FF",
+        "SECONDARY": "#03060A",
+        "ACCENT": "#2B4A6E",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "fbm",
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "chromatic-glass",
+      "name": "Chromatic Glass",
+      "category": "glass",
+      "category_name": "Glass & Glossy",
+      "description": "A wall of thick glass bricks: each block bends the light behind it and splits its edges into rainbow fringes.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/glass/chromatic-glass.glsl",
+      "dist": "dist/glass/chromatic-glass.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": true,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 107,
+      "tags": [
+        "glass",
+        "bricks",
+        "chromatic",
+        "dispersion",
+        "refraction"
+      ],
+      "colors": {
+        "PRIMARY": "#FF6BB5",
+        "SECONDARY": "#090A10",
+        "ACCENT": "#6BD6FF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "BRICKS",
+          "type": "float",
+          "default": 6.0,
+          "min": 3.0,
+          "max": 14.0,
+          "description": "Bricks per screen height",
+          "common": false
+        }
+      ],
+      "modules": [
+        "sdf",
+        "value"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "cracked-glass",
       "name": "Cracked Glass",
       "category": "glass",
@@ -8250,7 +9956,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 88,
+      "order": 108,
       "tags": [
         "glass",
         "cracked",
@@ -8361,7 +10067,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 89,
+      "order": 109,
       "tags": [
         "glass",
         "frosted",
@@ -8448,7 +10154,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 90,
+      "order": 110,
       "tags": [
         "glass",
         "antique",
@@ -8542,7 +10248,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 91,
+      "order": 111,
       "tags": [
         "prism",
         "rainbow",
@@ -8626,7 +10332,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 92,
+      "order": 112,
       "tags": [
         "glass",
         "fluted",
@@ -8727,7 +10433,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 93,
+      "order": 113,
       "tags": [
         "glass",
         "shimmer",
@@ -8810,7 +10516,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 94,
+      "order": 114,
       "tags": [
         "glossy",
         "reflection",
@@ -8911,7 +10617,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 95,
+      "order": 115,
       "tags": [
         "hologram",
         "glass",
@@ -8996,7 +10702,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 96,
+      "order": 116,
       "tags": [
         "ice",
         "frost",
@@ -9056,6 +10762,88 @@
       }
     },
     {
+      "id": "ice-shards",
+      "name": "Ice Shards",
+      "category": "glass",
+      "category_name": "Glass & Glossy",
+      "description": "Sharp splinters of ice radiate from the corners, each facet refracting cold light with a bright cutting edge.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/glass/ice-shards.glsl",
+      "dist": "dist/glass/ice-shards.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": true,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 117,
+      "tags": [
+        "ice",
+        "shards",
+        "crystal",
+        "cold",
+        "blue",
+        "glass"
+      ],
+      "colors": {
+        "PRIMARY": "#CFF2FF",
+        "SECONDARY": "#06111C",
+        "ACCENT": "#4FA8FF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "voronoi",
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "liquid-glass",
       "name": "Liquid Glass",
       "category": "glass",
@@ -9092,7 +10880,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 97,
+      "order": 118,
       "tags": [
         "glass",
         "liquid",
@@ -9161,6 +10949,168 @@
       }
     },
     {
+      "id": "liquid-hologram",
+      "name": "Liquid Hologram",
+      "category": "glass",
+      "category_name": "Glass & Glossy",
+      "description": "A pane of rippling holographic liquid: iridescent bands slosh across it under fine scanlines.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/glass/liquid-hologram.glsl",
+      "dist": "dist/glass/liquid-hologram.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 119,
+      "tags": [
+        "hologram",
+        "liquid",
+        "iridescent",
+        "scanlines",
+        "futuristic"
+      ],
+      "colors": {
+        "PRIMARY": "#8CF5FF",
+        "SECONDARY": "#05060C",
+        "ACCENT": "#C084FC",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "gradient",
+        "color"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "mirror-dimension",
+      "name": "Mirror Dimension",
+      "category": "glass",
+      "category_name": "Glass & Glossy",
+      "description": "An infinity mirror: nested frames recede into the distance, each reflection a little dimmer and tinted, slowly rotating.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/glass/mirror-dimension.glsl",
+      "dist": "dist/glass/mirror-dimension.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 120,
+      "tags": [
+        "mirror",
+        "infinity",
+        "recursion",
+        "frames",
+        "surreal"
+      ],
+      "colors": {
+        "PRIMARY": "#B8A6FF",
+        "SECONDARY": "#050409",
+        "ACCENT": "#6BE6FF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "sdf"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "mirror-surface",
       "name": "Mirror Surface",
       "category": "glass",
@@ -9196,7 +11146,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 98,
+      "order": 121,
       "tags": [
         "mirror",
         "reflection",
@@ -9297,7 +11247,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 99,
+      "order": 122,
       "tags": [
         "rain",
         "window",
@@ -9391,7 +11341,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 100,
+      "order": 123,
       "tags": [
         "glitch",
         "gpu",
@@ -9486,7 +11436,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 101,
+      "order": 124,
       "tags": [
         "glitch",
         "jpeg",
@@ -9578,7 +11528,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 102,
+      "order": 125,
       "tags": [
         "glitch",
         "memory",
@@ -9670,7 +11620,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 103,
+      "order": 126,
       "tags": [
         "glitch",
         "neon",
@@ -9763,7 +11713,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 104,
+      "order": 127,
       "tags": [
         "glitch",
         "datamosh",
@@ -9869,7 +11819,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 105,
+      "order": 128,
       "tags": [
         "glitch",
         "digital",
@@ -9935,6 +11885,97 @@
       }
     },
     {
+      "id": "emp-pulse",
+      "name": "EMP Pulse",
+      "category": "glitch",
+      "category_name": "Glitch & Corruption",
+      "description": "An electromagnetic pulse shockwave sweeps outward from the centre, leaving a brief wake of colour-split, noisy, shaken pixels.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/glitch/emp-pulse.glsl",
+      "dist": "dist/glitch/emp-pulse.glsl",
+      "mode": "post",
+      "animated": true,
+      "flashing": true,
+      "distorts_text": true,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 129,
+      "tags": [
+        "emp",
+        "shockwave",
+        "glitch",
+        "pulse",
+        "disruption"
+      ],
+      "colors": {
+        "PRIMARY": "#7AD7FF",
+        "SECONDARY": "#4C1D95",
+        "ACCENT": "#C084FC",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "PERIOD",
+          "type": "float",
+          "default": 7.0,
+          "min": 3.0,
+          "max": 30.0,
+          "description": "Seconds between pulses",
+          "common": false
+        }
+      ],
+      "modules": [
+        "hash",
+        "crt"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "glitch-rain",
       "name": "Glitch Rain",
       "category": "glitch",
@@ -9970,7 +12011,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 106,
+      "order": 130,
       "tags": [
         "glitch",
         "rain",
@@ -10052,7 +12093,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 107,
+      "order": 131,
       "tags": [
         "hologram",
         "glitch",
@@ -10100,6 +12141,189 @@
       }
     },
     {
+      "id": "interdimensional-static",
+      "name": "Interdimensional Static",
+      "category": "glitch",
+      "category_name": "Glitch & Corruption",
+      "description": "TV static from another dimension: chromatic snow in which fractal shapes keep surfacing and dissolving.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/glitch/interdimensional-static.glsl",
+      "dist": "dist/glitch/interdimensional-static.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": true,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 132,
+      "tags": [
+        "static",
+        "noise",
+        "surreal",
+        "glitch",
+        "colorful"
+      ],
+      "colors": {
+        "PRIMARY": "#9A7BFF",
+        "SECONDARY": "#050407",
+        "ACCENT": "#6BFFD5",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "hash",
+        "fbm",
+        "color"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "pixel-sort",
+      "name": "Pixel Sort",
+      "category": "glitch",
+      "category_name": "Glitch & Corruption",
+      "description": "Glitch-art pixel sorting: bright runs of the image melt downward in streaks, the smear length breathing over time.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/glitch/pixel-sort.glsl",
+      "dist": "dist/glitch/pixel-sort.glsl",
+      "mode": "post",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": true,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0,
+          "LENGTH": 0.025
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2,
+          "LENGTH": 0.18
+        }
+      },
+      "added": "2026-10-18",
+      "order": 133,
+      "tags": [
+        "pixel-sort",
+        "glitch-art",
+        "melt",
+        "streaks",
+        "databending"
+      ],
+      "colors": {
+        "PRIMARY": "#8B5CF6",
+        "SECONDARY": "#4C1D95",
+        "ACCENT": "#C084FC",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "LENGTH",
+          "type": "float",
+          "default": 0.06,
+          "min": 0.01,
+          "max": 0.4,
+          "description": "Maximum streak length (fraction of height)",
+          "common": false
+        },
+        {
+          "name": "THRESHOLD",
+          "type": "float",
+          "default": 0.5,
+          "min": 0.1,
+          "max": 0.9,
+          "description": "Brightness that starts a streak",
+          "common": false
+        }
+      ],
+      "modules": [
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "reality-break",
       "name": "Reality Break",
       "category": "glitch",
@@ -10137,7 +12361,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 108,
+      "order": 134,
       "tags": [
         "glitch",
         "shatter",
@@ -10243,7 +12467,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 109,
+      "order": 135,
       "tags": [
         "glitch",
         "chromatic",
@@ -10345,7 +12569,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 110,
+      "order": 136,
       "tags": [
         "glitch",
         "tear",
@@ -10445,7 +12669,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 111,
+      "order": 137,
       "tags": [
         "glitch",
         "interference",
@@ -10547,7 +12771,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 112,
+      "order": 138,
       "tags": [
         "lava-lamp",
         "retro",
@@ -10642,7 +12866,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 113,
+      "order": 139,
       "tags": [
         "gradient",
         "mesh",
@@ -10725,7 +12949,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 114,
+      "order": 140,
       "tags": [
         "metaballs",
         "blobs",
@@ -10783,6 +13007,87 @@
       }
     },
     {
+      "id": "oil-slick",
+      "name": "Oil Slick",
+      "category": "liquid",
+      "category_name": "Liquid Art",
+      "description": "A film of oil on dark wet asphalt, its rainbow interference swirls slowly stretching and folding.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/liquid/oil-slick.glsl",
+      "dist": "dist/liquid/oil-slick.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 141,
+      "tags": [
+        "oil",
+        "rainbow",
+        "iridescent",
+        "swirl",
+        "dark"
+      ],
+      "colors": {
+        "PRIMARY": "#8B5CF6",
+        "SECONDARY": "#050506",
+        "ACCENT": "#C084FC",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "fbm",
+        "color"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "psychedelic-waves",
       "name": "Psychedelic Waves",
       "category": "liquid",
@@ -10818,7 +13123,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 115,
+      "order": 142,
       "tags": [
         "psychedelic",
         "colorful",
@@ -10911,7 +13216,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 116,
+      "order": 143,
       "tags": [
         "hacker",
         "terminal",
@@ -10994,7 +13299,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 117,
+      "order": 144,
       "tags": [
         "matrix",
         "rain",
@@ -11085,7 +13390,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 118,
+      "order": 145,
       "tags": [
         "matrix",
         "code",
@@ -11188,7 +13493,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 119,
+      "order": 146,
       "tags": [
         "matrix",
         "purple",
@@ -11235,6 +13540,88 @@
       }
     },
     {
+      "id": "black-gold",
+      "name": "Black and Gold",
+      "category": "metallic",
+      "category_name": "Metallic & Industrial",
+      "description": "Art-deco luxury: fine gold sunburst and fan motifs inlaid in black lacquer, a warm sheen gliding across the gilt.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/metallic/black-gold.glsl",
+      "dist": "dist/metallic/black-gold.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 147,
+      "tags": [
+        "gold",
+        "black",
+        "art-deco",
+        "luxury",
+        "elegant",
+        "pattern"
+      ],
+      "colors": {
+        "PRIMARY": "#E8C26A",
+        "SECONDARY": "#050403",
+        "ACCENT": "#FFF0C2",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "sdf"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "brushed-steel",
       "name": "Brushed Steel",
       "category": "metallic",
@@ -11270,7 +13657,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 120,
+      "order": 148,
       "tags": [
         "steel",
         "brushed",
@@ -11353,7 +13740,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 121,
+      "order": 149,
       "tags": [
         "carbon",
         "fiber",
@@ -11446,7 +13833,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 122,
+      "order": 150,
       "tags": [
         "chrome",
         "metal",
@@ -11529,7 +13916,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 123,
+      "order": 151,
       "tags": [
         "copper",
         "metal",
@@ -11614,7 +14001,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 124,
+      "order": 152,
       "tags": [
         "gold",
         "metal",
@@ -11699,7 +14086,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 125,
+      "order": 153,
       "tags": [
         "iridescent",
         "metal",
@@ -11783,7 +14170,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 126,
+      "order": 154,
       "tags": [
         "metal",
         "mercury",
@@ -11876,7 +14263,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 127,
+      "order": 155,
       "tags": [
         "gears",
         "machinery",
@@ -11959,7 +14346,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 128,
+      "order": 156,
       "tags": [
         "metal",
         "waves",
@@ -12041,7 +14428,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 129,
+      "order": 157,
       "tags": [
         "molten",
         "metal",
@@ -12089,6 +14476,170 @@
       }
     },
     {
+      "id": "obsidian-gloss",
+      "name": "Obsidian Gloss",
+      "category": "metallic",
+      "category_name": "Metallic & Industrial",
+      "description": "Polished volcanic glass: deep black with conchoidal ripple marks, catching a single slow gleam of light.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/metallic/obsidian-gloss.glsl",
+      "dist": "dist/metallic/obsidian-gloss.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 158,
+      "tags": [
+        "obsidian",
+        "black",
+        "glossy",
+        "dark",
+        "minimal",
+        "premium"
+      ],
+      "colors": {
+        "PRIMARY": "#D8DCFF",
+        "SECONDARY": "#020203",
+        "ACCENT": "#4B3B6E",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "gradient",
+        "lighting"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "rainbow-chrome",
+      "name": "Rainbow Chrome",
+      "category": "metallic",
+      "category_name": "Metallic & Industrial",
+      "description": "Holographic foil: a mirror-bright surface whose rippled reflections cycle through every colour of the rainbow.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/metallic/rainbow-chrome.glsl",
+      "dist": "dist/metallic/rainbow-chrome.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 159,
+      "tags": [
+        "chrome",
+        "rainbow",
+        "holographic",
+        "foil",
+        "iridescent"
+      ],
+      "colors": {
+        "PRIMARY": "#8B5CF6",
+        "SECONDARY": "#4C1D95",
+        "ACCENT": "#C084FC",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "gradient",
+        "color",
+        "lighting"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "rusted-steel",
       "name": "Rusted Steel",
       "category": "metallic",
@@ -12124,7 +14675,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 130,
+      "order": 160,
       "tags": [
         "rust",
         "steel",
@@ -12217,7 +14768,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 131,
+      "order": 161,
       "tags": [
         "titanium",
         "metal",
@@ -12301,7 +14852,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 132,
+      "order": 162,
       "tags": [
         "beacon",
         "beam",
@@ -12406,7 +14957,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 133,
+      "order": 163,
       "tags": [
         "magic",
         "glyphs",
@@ -12498,7 +15049,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 134,
+      "order": 164,
       "tags": [
         "void",
         "purple",
@@ -12585,7 +15136,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 135,
+      "order": 165,
       "tags": [
         "portal",
         "purple",
@@ -12688,7 +15239,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 136,
+      "order": 166,
       "tags": [
         "orbs",
         "green",
@@ -12780,7 +15331,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 137,
+      "order": 167,
       "tags": [
         "nether",
         "red",
@@ -12864,7 +15415,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 138,
+      "order": 168,
       "tags": [
         "portal",
         "purple",
@@ -12966,7 +15517,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 139,
+      "order": 169,
       "tags": [
         "obsidian",
         "crystal",
@@ -13050,7 +15601,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 140,
+      "order": 170,
       "tags": [
         "rain",
         "pixel",
@@ -13143,7 +15694,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 141,
+      "order": 171,
       "tags": [
         "redstone",
         "circuit",
@@ -13236,7 +15787,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 142,
+      "order": 172,
       "tags": [
         "sculk",
         "cyan",
@@ -13320,7 +15871,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 143,
+      "order": 173,
       "tags": [
         "fire",
         "blue",
@@ -13404,7 +15955,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 144,
+      "order": 174,
       "tags": [
         "rain",
         "acid",
@@ -13485,7 +16036,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 145,
+      "order": 175,
       "tags": [
         "mushrooms",
         "fungi",
@@ -13579,7 +16130,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 146,
+      "order": 176,
       "tags": [
         "snow",
         "blizzard",
@@ -13673,7 +16224,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 147,
+      "order": 177,
       "tags": [
         "clouds",
         "sky",
@@ -13766,7 +16317,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 148,
+      "order": 178,
       "tags": [
         "crystal",
         "cave",
@@ -13792,6 +16343,98 @@
         "terminal-texture",
         "animation",
         "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
+      "id": "cybernetic-vines",
+      "name": "Cybernetic Vines",
+      "category": "nature",
+      "category_name": "Nature & Atmosphere",
+      "description": "Metallic vines with glowing nodes creep up from the bottom of the window, branching and curling as they grow.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/nature/cybernetic-vines.glsl",
+      "dist": "dist/nature/cybernetic-vines.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 179,
+      "tags": [
+        "vines",
+        "cyborg",
+        "organic",
+        "growth",
+        "green",
+        "nature"
+      ],
+      "colors": {
+        "PRIMARY": "#4DFF9A",
+        "SECONDARY": "#030604",
+        "ACCENT": "#8C99A8",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "CYCLE",
+          "type": "float",
+          "default": 24.0,
+          "min": 8.0,
+          "max": 90.0,
+          "description": "Seconds per growth cycle",
+          "common": false
+        }
+      ],
+      "modules": [
+        "hash",
+        "value"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
       ],
       "min_ghostty": "1.3.0",
       "legacy_build": "1.2.0",
@@ -13850,7 +16493,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 149,
+      "order": 180,
       "tags": [
         "desert",
         "dunes",
@@ -13899,6 +16542,97 @@
       }
     },
     {
+      "id": "drizzle-trails",
+      "name": "Drizzle Trails",
+      "category": "nature",
+      "category_name": "Nature & Atmosphere",
+      "description": "Fine, wind-blown drizzle: thin luminous streaks with long trailing tails slant across a soft grey evening.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/nature/drizzle-trails.glsl",
+      "dist": "dist/nature/drizzle-trails.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 181,
+      "tags": [
+        "rain",
+        "drizzle",
+        "streaks",
+        "calm",
+        "grey",
+        "weather"
+      ],
+      "colors": {
+        "PRIMARY": "#CFE0F2",
+        "SECONDARY": "#12161C",
+        "ACCENT": "#5C6E85",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "SLANT",
+          "type": "float",
+          "default": 0.35,
+          "min": -1.0,
+          "max": 1.0,
+          "description": "Wind slant",
+          "common": false
+        }
+      ],
+      "modules": [
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "fog",
       "name": "Fog",
       "category": "nature",
@@ -13934,7 +16668,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 150,
+      "order": 182,
       "tags": [
         "fog",
         "mist",
@@ -14016,7 +16750,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 151,
+      "order": 183,
       "tags": [
         "forest",
         "sunbeams",
@@ -14100,7 +16834,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 152,
+      "order": 184,
       "tags": [
         "mountains",
         "mist",
@@ -14193,7 +16927,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 153,
+      "order": 185,
       "tags": [
         "moon",
         "night",
@@ -14251,6 +16985,88 @@
       }
     },
     {
+      "id": "neon-aurora",
+      "name": "Neon Aurora",
+      "category": "nature",
+      "category_name": "Nature & Atmosphere",
+      "description": "A synthwave aurora: hot pink and electric cyan curtains ripple over a dark violet sky above a glowing horizon line.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/nature/neon-aurora.glsl",
+      "dist": "dist/nature/neon-aurora.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 186,
+      "tags": [
+        "aurora",
+        "neon",
+        "synthwave",
+        "pink",
+        "cyan",
+        "sky"
+      ],
+      "colors": {
+        "PRIMARY": "#FF3DB4",
+        "SECONDARY": "#0A0418",
+        "ACCENT": "#3DF2FF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "fbm",
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "northern-lights",
       "name": "Northern Lights",
       "category": "nature",
@@ -14286,7 +17102,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 154,
+      "order": 187,
       "tags": [
         "aurora",
         "northern-lights",
@@ -14380,7 +17196,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 155,
+      "order": 188,
       "tags": [
         "rain",
         "storm",
@@ -14438,6 +17254,98 @@
       }
     },
     {
+      "id": "sandstorm",
+      "name": "Sandstorm",
+      "category": "nature",
+      "category_name": "Nature & Atmosphere",
+      "description": "A digital sandstorm: grains whip sideways in dense streams while ochre dust clouds roll through and swallow the light.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/nature/sandstorm.glsl",
+      "dist": "dist/nature/sandstorm.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 189,
+      "tags": [
+        "sand",
+        "storm",
+        "desert",
+        "wind",
+        "dust",
+        "particles"
+      ],
+      "colors": {
+        "PRIMARY": "#E8B877",
+        "SECONDARY": "#2A1A0C",
+        "ACCENT": "#8A5A2B",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "WIND",
+          "type": "float",
+          "default": 2.0,
+          "min": 0.5,
+          "max": 5.0,
+          "description": "Wind speed",
+          "common": false
+        }
+      ],
+      "modules": [
+        "hash",
+        "fbm"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "sunrise",
       "name": "Sunrise",
       "category": "nature",
@@ -14473,7 +17381,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 156,
+      "order": 190,
       "tags": [
         "sunrise",
         "dawn",
@@ -14566,7 +17474,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 157,
+      "order": 191,
       "tags": [
         "sunset",
         "sea",
@@ -14650,7 +17558,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 158,
+      "order": 192,
       "tags": [
         "storm",
         "thunder",
@@ -14737,7 +17645,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 159,
+      "order": 193,
       "tags": [
         "ocean",
         "glow",
@@ -14821,7 +17729,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 160,
+      "order": 194,
       "tags": [
         "ocean",
         "underwater",
@@ -14923,7 +17831,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 161,
+      "order": 195,
       "tags": [
         "ocean",
         "data",
@@ -15004,7 +17912,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 162,
+      "order": 196,
       "tags": [
         "waterfall",
         "hologram",
@@ -15084,7 +17992,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 163,
+      "order": 197,
       "tags": [
         "liquid",
         "glossy",
@@ -15167,7 +18075,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 164,
+      "order": 198,
       "tags": [
         "ocean",
         "night",
@@ -15272,7 +18180,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 165,
+      "order": 199,
       "tags": [
         "ocean",
         "water",
@@ -15375,7 +18283,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 166,
+      "order": 200,
       "tags": [
         "rain",
         "glass",
@@ -15479,7 +18387,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 167,
+      "order": 201,
       "tags": [
         "ocean",
         "storm",
@@ -15582,7 +18490,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 168,
+      "order": 202,
       "tags": [
         "ocean",
         "tropical",
@@ -15667,7 +18575,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 169,
+      "order": 203,
       "tags": [
         "ocean",
         "water",
@@ -15771,7 +18679,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 170,
+      "order": 204,
       "tags": [
         "water",
         "refraction",
@@ -15864,7 +18772,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 171,
+      "order": 205,
       "tags": [
         "water",
         "ripples",
@@ -15965,7 +18873,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 172,
+      "order": 206,
       "tags": [
         "water",
         "waterfall",
@@ -16058,7 +18966,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 173,
+      "order": 207,
       "tags": [
         "ash",
         "volcano",
@@ -16141,7 +19049,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 174,
+      "order": 208,
       "tags": [
         "sakura",
         "petals",
@@ -16243,7 +19151,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 175,
+      "order": 209,
       "tags": [
         "digital",
         "binary",
@@ -16325,7 +19233,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 176,
+      "order": 210,
       "tags": [
         "autumn",
         "leaves",
@@ -16419,7 +19327,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 177,
+      "order": 211,
       "tags": [
         "particles",
         "fireflies",
@@ -16513,7 +19421,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 178,
+      "order": 212,
       "tags": [
         "particles",
         "bokeh",
@@ -16605,7 +19513,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 179,
+      "order": 213,
       "tags": [
         "magic",
         "sparkle",
@@ -16687,7 +19595,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 180,
+      "order": 214,
       "tags": [
         "swarm",
         "nanobots",
@@ -16768,7 +19676,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 181,
+      "order": 215,
       "tags": [
         "fireflies",
         "neon",
@@ -16859,7 +19767,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 182,
+      "order": 216,
       "tags": [
         "particles",
         "trails",
@@ -16962,7 +19870,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 183,
+      "order": 217,
       "tags": [
         "particles",
         "vortex",
@@ -17019,6 +19927,96 @@
       }
     },
     {
+      "id": "quantum-interference",
+      "name": "Quantum Interference",
+      "category": "particles",
+      "category_name": "Particles",
+      "description": "The double-slit experiment: single photons land one by one, gradually building up bright and dark interference fringes.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/particles/quantum-interference.glsl",
+      "dist": "dist/particles/quantum-interference.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 218,
+      "tags": [
+        "quantum",
+        "double-slit",
+        "physics",
+        "photons",
+        "science"
+      ],
+      "colors": {
+        "PRIMARY": "#7DF0FF",
+        "SECONDARY": "#030409",
+        "ACCENT": "#FF7AD4",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [
+        {
+          "name": "CYCLE",
+          "type": "float",
+          "default": 30.0,
+          "min": 10.0,
+          "max": 120.0,
+          "description": "Seconds to build the pattern",
+          "common": false
+        }
+      ],
+      "modules": [
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "quantum-particles",
       "name": "Quantum Particles",
       "category": "particles",
@@ -17054,7 +20052,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 184,
+      "order": 219,
       "tags": [
         "quantum",
         "abstract",
@@ -17104,6 +20102,89 @@
       }
     },
     {
+      "id": "snow-accumulation",
+      "name": "Snow Accumulation",
+      "category": "particles",
+      "category_name": "Particles",
+      "description": "Snow falls behind your text and settles on it: every line of glyphs wears a soft white cap that sparkles faintly.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/particles/snow-accumulation.glsl",
+      "dist": "dist/particles/snow-accumulation.glsl",
+      "mode": "glow",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 220,
+      "tags": [
+        "snow",
+        "winter",
+        "reactive",
+        "text",
+        "cozy",
+        "particles"
+      ],
+      "colors": {
+        "PRIMARY": "#FFFFFF",
+        "SECONDARY": "#0B1626",
+        "ACCENT": "#BFE3FF",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "hash"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [
+        "Without frame feedback the snow cannot pile up over time; caps are drawn wherever a glyph has empty space above it."
+      ],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "snowfall",
       "name": "Snowfall",
       "category": "particles",
@@ -17139,7 +20220,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 185,
+      "order": 221,
       "tags": [
         "snow",
         "winter",
@@ -17240,7 +20321,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 186,
+      "order": 222,
       "tags": [
         "space",
         "dust",
@@ -17324,7 +20405,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 187,
+      "order": 223,
       "tags": [
         "rift",
         "portal",
@@ -17418,7 +20499,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 188,
+      "order": 224,
       "tags": [
         "dream",
         "portal",
@@ -17469,6 +20550,89 @@
       }
     },
     {
+      "id": "glowing-runes",
+      "name": "Glowing Runes",
+      "category": "portals",
+      "category_name": "Experimental Portals",
+      "description": "A magic circle of rotating rune rings and a hexagram glows on the ground, symbols igniting one after another.",
+      "author": "GhostFX Contributors",
+      "license": "MIT",
+      "version": "1.0.0",
+      "source": "shaders/portals/glowing-runes.glsl",
+      "dist": "dist/portals/glowing-runes.glsl",
+      "mode": "background",
+      "animated": true,
+      "flashing": false,
+      "distorts_text": false,
+      "reduced_motion": true,
+      "presets": [
+        "subtle",
+        "balanced",
+        "cinematic"
+      ],
+      "preset_values": {
+        "subtle": {
+          "INTENSITY": 0.35,
+          "SPEED": 0.6,
+          "READABILITY": 1.0,
+          "DISTORT_TEXT": 0
+        },
+        "balanced": {},
+        "cinematic": {
+          "INTENSITY": 1.0,
+          "READABILITY": 0.25,
+          "QUALITY": 2
+        }
+      },
+      "added": "2026-10-18",
+      "order": 225,
+      "tags": [
+        "runes",
+        "magic",
+        "circle",
+        "summoning",
+        "fantasy",
+        "glow"
+      ],
+      "colors": {
+        "PRIMARY": "#FFB347",
+        "SECONDARY": "#070403",
+        "ACCENT": "#FF5E3A",
+        "BACKGROUND": "#0B0A10",
+        "FOREGROUND": "#E6E3F0"
+      },
+      "parameters": [],
+      "modules": [
+        "hash",
+        "sdf"
+      ],
+      "required_capabilities": [
+        "terminal-texture",
+        "animation",
+        "derivatives"
+      ],
+      "min_ghostty": "1.3.0",
+      "legacy_build": "1.2.0",
+      "known_limitations": [],
+      "attribution": null,
+      "platforms": {
+        "linux": "unknown",
+        "macos": "unknown"
+      },
+      "verification": {
+        "compile": "unknown",
+        "ghostty_render": "untested",
+        "animates": null,
+        "readability_contrast": null,
+        "ghostty_version": null,
+        "checked": null
+      },
+      "benchmark": {
+        "status": "not-benchmarked"
+      },
+      "previews": {}
+    },
+    {
       "id": "quantum-gateway",
       "name": "Quantum Gateway",
       "category": "portals",
@@ -17504,7 +20668,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 189,
+      "order": 226,
       "tags": [
         "quantum",
         "gateway",
@@ -17589,7 +20753,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 190,
+      "order": 227,
       "tags": [
         "warp",
         "distortion",
@@ -17682,7 +20846,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 191,
+      "order": 228,
       "tags": [
         "vortex",
         "time",
@@ -17766,7 +20930,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 192,
+      "order": 229,
       "tags": [
         "portal",
         "void",
@@ -17860,7 +21024,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 193,
+      "order": 230,
       "tags": [
         "space",
         "black-hole",
@@ -17952,7 +21116,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 194,
+      "order": 231,
       "tags": [
         "asteroids",
         "space",
@@ -18032,7 +21196,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 195,
+      "order": 232,
       "tags": [
         "space",
         "aurora",
@@ -18115,7 +21279,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 196,
+      "order": 233,
       "tags": [
         "space",
         "black-hole",
@@ -18217,7 +21381,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 197,
+      "order": 234,
       "tags": [
         "cmb",
         "cosmology",
@@ -18299,7 +21463,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 198,
+      "order": 235,
       "tags": [
         "space",
         "dust",
@@ -18382,7 +21546,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 199,
+      "order": 236,
       "tags": [
         "space",
         "dark-matter",
@@ -18462,7 +21626,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 200,
+      "order": 237,
       "tags": [
         "eclipse",
         "sun",
@@ -18553,7 +21717,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 201,
+      "order": 238,
       "tags": [
         "space",
         "black-hole",
@@ -18636,7 +21800,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 202,
+      "order": 239,
       "tags": [
         "gravity",
         "waves",
@@ -18728,7 +21892,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 203,
+      "order": 240,
       "tags": [
         "hyperspace",
         "tunnel",
@@ -18809,7 +21973,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 204,
+      "order": 241,
       "tags": [
         "moon",
         "lunar",
@@ -18892,7 +22056,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 205,
+      "order": 242,
       "tags": [
         "space",
         "meteors",
@@ -18987,7 +22151,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 206,
+      "order": 243,
       "tags": [
         "space",
         "nebula",
@@ -19070,7 +22234,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 207,
+      "order": 244,
       "tags": [
         "space",
         "saturn",
@@ -19153,7 +22317,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 208,
+      "order": 245,
       "tags": [
         "space",
         "pulsar",
@@ -19245,7 +22409,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 209,
+      "order": 246,
       "tags": [
         "space",
         "quasar",
@@ -19327,7 +22491,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 210,
+      "order": 247,
       "tags": [
         "space",
         "galaxy",
@@ -19429,7 +22593,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 211,
+      "order": 248,
       "tags": [
         "space",
         "stars",
@@ -19521,7 +22685,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 212,
+      "order": 249,
       "tags": [
         "starship",
         "bridge",
@@ -19603,7 +22767,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 213,
+      "order": 250,
       "tags": [
         "space",
         "explosion",
@@ -19695,7 +22859,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 214,
+      "order": 251,
       "tags": [
         "space",
         "warp",
@@ -19796,7 +22960,7 @@
         }
       },
       "added": "2026-10-18",
-      "order": 215,
+      "order": 252,
       "tags": [
         "space",
         "wormhole",
