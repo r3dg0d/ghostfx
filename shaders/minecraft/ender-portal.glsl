@@ -24,19 +24,19 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     for (int i = 0; i < 2 * GFX_LAYERS; i++) {
         float fi = float(i);
         float depth = 1.0 + fi * 0.55 * P_DEPTH;
-        vec2 q = gfx_rot(fi * 1.7 + 0.3) * p * (6.0 + fi * 3.0) * P_DENSITY;
+        vec2 q = gfx_rot(fi * 1.7 + 0.3) * p * (14.0 + fi * 5.0) * P_DENSITY;
         q += vec2(t * (0.08 + 0.05 / depth), t * 0.03 * fi);
         vec2 id = floor(q);
         vec2 f = fract(q) - 0.5;
         float h = hash12(id + fi * 13.1);
-        float on = step(0.86, h);
+        float on = step(0.8, h);
         float sq = max(abs(f.x), abs(f.y));
-        float speck = on * smoothstep(0.22, 0.12, sq);
+        float speck = on * smoothstep(0.2, 0.14, sq);
         float hue = hash12(id + 91.7 + fi);
         vec3 tint = mix(GFX_SECONDARY, GFX_PRIMARY, step(0.55, hue));
         tint = mix(tint, GFX_ACCENT, step(0.93, hue));
         float pulse = 0.6 + 0.4 * sin(t * 1.3 + h * 40.0);
-        col += tint * speck * pulse * (1.4 / depth);
+        col += tint * speck * pulse * (1.8 / depth);
     }
     // Faint dark-teal haze so the void is never perfectly flat.
     col += GFX_SECONDARY * 0.06 * (1.0 - length(p));
