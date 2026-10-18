@@ -177,8 +177,16 @@ vec3 gfx_readable(vec3 fx) {
     if (r <= 0.0) return fx;
     float l = gfx_luma(fx);
     if (gfx_luma(GFX_TERM_FG) >= gfx_luma(GFX_TERM_BG)) {
+        // Soft knee: untouched below 60% of the cap, compressed above it.
+        // Compressed colours get a saturation boost so hot highlights stay
+        // orange/cyan instead of turning muddy grey.
         float cap = mix(1.0, 0.3, r);
-        return fx * min(1.0, cap / max(l, 1e-4));
+        float k = 0.6 * cap;
+        if (l <= k) return fx;
+        float l2 = k + (cap - k) * (1.0 - exp(-(l - k) / (cap - k)));
+        vec3 c = fx * (l2 / l);
+        float m = max(c.r, max(c.g, c.b));
+        return m * pow(c / max(m, 1e-4), vec3(1.0 + 2.0 * (1.0 - l2 / l)));
     }
     float lo = mix(0.0, 0.62, r);
     return mix(fx, vec3(1.0), clamp((lo - l) / max(1.0 - l, 1e-4), 0.0, 1.0));
