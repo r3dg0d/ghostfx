@@ -11,12 +11,17 @@
 
 // Ghostty >= 1.3 exposes the terminal colors as uniforms. Older releases do
 // not, so legacy builds fall back to the palette colors from the preset.
+// Focus uniforms also arrived in 1.3; legacy builds behave as always focused.
 #ifdef GFX_LEGACY
 #define GFX_TERM_BG GFX_BACKGROUND
 #define GFX_TERM_FG GFX_FOREGROUND
+#define GFX_TIME_FOCUS 0.0
+#define GFX_FOCUSED 1
 #else
 #define GFX_TERM_BG iBackgroundColor
 #define GFX_TERM_FG iForegroundColor
+#define GFX_TIME_FOCUS iTimeFocus
+#define GFX_FOCUSED iFocus
 #endif
 
 // Quality-dependent loop counts. GFX_QUALITY: 0 = eco, 1 = balanced, 2 = ultra.
