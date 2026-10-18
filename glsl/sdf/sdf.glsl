@@ -60,6 +60,15 @@ float hex_edge(vec2 g) {
     return max(dot(g, vec2(0.5, 0.8660254)), g.x);
 }
 
+// Anti-aliased grid lines at integer coordinates of g, `width` pixels wide.
+// Lines fade out where they get denser than the pixel grid (no moire).
+float grid_lines(vec2 g, float width) {
+    vec2 w = max(fwidth(g), vec2(1e-5));
+    vec2 gl = abs(fract(g - 0.5) - 0.5) / w;
+    vec2 l = (1.0 - smoothstep(width * 0.5, width * 0.5 + 1.0, gl)) * smoothstep(0.5, 0.15, w);
+    return max(l.x, l.y);
+}
+
 // Smooth minimum for blending blobs.
 float smin(float a, float b, float k) {
     float h = clamp(0.5 + 0.5 * (b - a) / k, 0.0, 1.0);
