@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #07060b;
+  --color-panel: #110f19;
+  --color-line: #231f33;
+  --color-muted: #8b84a6;
+  --color-fg: #ece8ff;
+  --color-accent: #a78bfa;
+  --color-accent-strong: #8b5cf6;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+
+html { color-scheme: dark; }
+body { background: var(--color-ink); color: var(--color-fg); }
+::selection { background: #8b5cf655; }
+
+.glow { box-shadow: 0 0 0 1px #8b5cf633, 0 10px 40px -10px #8b5cf655; }
+input[type="range"] { accent-color: var(--color-accent-strong); }

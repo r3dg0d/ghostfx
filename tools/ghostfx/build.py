@@ -149,7 +149,7 @@ def build_shader(
         f"// Source: {shader.rel_source()} | Built by ghostfx {__version__}",
         f"// License: {shader.license} | https://github.com/r3dg0d/ghostfx",
         "// Generated file: edit the source and rebuild instead.",
-        "// Requires Ghostty >= 1.3" if not legacy else "// Legacy build for Ghostty 1.1/1.2",
+        "// Requires Ghostty >= 1.3" if not legacy else "// Legacy build for Ghostty 1.2",
         "",
     ]
     if legacy:

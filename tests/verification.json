@@ -1,0 +1,1806 @@
+{
+  "environment": "Xvfb + Mesa llvmpipe (software OpenGL 4.6)",
+  "ghostty_version": "1.3.1",
+  "shaders": {
+    "accretion-disk": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.63,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "alien-interface": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.02,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "alien-language": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.65,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "alien-planet": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.61,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "alien-radar": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.65,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "alien-technology": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.13,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "amber-terminal": {
+      "animates": false,
+      "compile": "pass",
+      "contrast": 8.46,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "ashfall": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.61,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "aurora-space": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.73,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "beacon-beam": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.23,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "bioluminescent-ocean": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.96,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "biomechanical": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.19,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "black-hole": {
+      "animates": false,
+      "compile": "pass",
+      "contrast": 11.27,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "blizzard": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.22,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "blue-fire": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 13.14,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "blue-phosphor": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.6,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "broken-gpu": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.95,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "brushed-steel": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.45,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "campfire-embers": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.95,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "carbon-fiber": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.55,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "cherry-blossoms": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.49,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "chrome": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.35,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "classic-crt": {
+      "animates": null,
+      "compile": "pass",
+      "contrast": 7.12,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "clouds": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.18,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "compression-artifacts": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.77,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "copper-metal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.78,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "corrupted-memory": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.08,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "cosmic-dust": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.73,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "cosmic-organism": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.53,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "cracked-glass": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.7,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "crt-arcade": {
+      "animates": null,
+      "compile": "pass",
+      "contrast": 1.18,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "crt-bloom": {
+      "animates": null,
+      "compile": "pass",
+      "contrast": 10.52,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "crt-broken": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 4.92,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "crt-flicker": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.56,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "crt-glitch": {
+      "animates": false,
+      "compile": "pass",
+      "contrast": 7.25,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "crt-interlaced": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.09,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "crt-rgb-mask": {
+      "animates": null,
+      "compile": "pass",
+      "contrast": 6.06,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "crt-static": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.31,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "crt-terminal-1980": {
+      "animates": false,
+      "compile": "pass",
+      "contrast": 1.04,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "crt-vhs": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.65,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "curved-crt": {
+      "animates": null,
+      "compile": "pass",
+      "contrast": 1.13,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "cyber-glitch": {
+      "animates": false,
+      "compile": "pass",
+      "contrast": 9.78,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "cyber-rain": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.28,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "cybernetic-hud": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.99,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "cyberpunk-city": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.85,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "datamosh": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.96,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "deep-ocean": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.39,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "desert-heat": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 4.7,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "digital-glitch": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.47,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "digital-particles": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.53,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "digital-tunnel": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.14,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "dimensional-rift": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.32,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "dream-portal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.84,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "electric-arcs": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.89,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "electric-blue": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.06,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "electric-circuit": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.94,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "electric-purple": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.21,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "electric-storm": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.3,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "electromagnetic-field": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.67,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "enchantment-table": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.46,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "end-dimension": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.44,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "ender-portal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.69,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "energy-shield": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.92,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "event-horizon": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 13.13,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "experience-orbs": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.9,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "extraterrestrial-portal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.02,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "extraterrestrial-signal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.42,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "falling-leaves": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.23,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "fireflies": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.46,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "floating-particles": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.28,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "fog": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.64,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "forest-light": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.29,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "fractal-zoom": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.52,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "frosted-glass": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.03,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "glass-distortion": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.83,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "glass-prism": {
+      "animates": false,
+      "compile": "pass",
+      "contrast": 8.88,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "glass-ripples": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.28,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "glass-shimmer": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.57,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "glitch-rain": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.07,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "glossy-reflection": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.54,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "gold-metal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.31,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "green-fire": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.48,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "green-phosphor": {
+      "animates": false,
+      "compile": "pass",
+      "contrast": 9.67,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "hacker-terminal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.48,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "heat-haze": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.36,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "hellfire": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.36,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "hexagonal-grid": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.82,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "hologram-glitch": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.18,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "holographic-glass": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.82,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "holographic-scanner": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.82,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "ice-glass": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.75,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "inferno": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.28,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "infinite-tunnel": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.58,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "ionized-plasma": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.44,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "iridescent-metal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.17,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "julia-set": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.3,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "kaleidoscope": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.55,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "lava-flow": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.74,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "lava-lamp": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.47,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "lightning": {
+      "animates": false,
+      "compile": "pass",
+      "contrast": 10.36,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "liquid-glass": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.8,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "liquid-gradient": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.89,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "liquid-metal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.7,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "liquid-surface": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.93,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "machinery": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.67,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "magic-dust": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.64,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "mandelbrot": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.42,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "matrix-rain": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.15,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "metaballs": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.82,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "metallic-waves": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.04,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "meteor-shower": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.88,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "mirror-surface": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.46,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "misty-mountains": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.62,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "molten-core": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.87,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "molten-metal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.31,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "moonlight": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.43,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "nebula": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.83,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "neon-current": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.76,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "neon-grid": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.66,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "neon-pulse": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.9,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "nether-atmosphere": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.01,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "nether-portal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.01,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "northern-lights": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.1,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "obsidian-crystals": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.4,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "ocean-at-night": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.86,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "ocean-waves": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.3,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "particle-trails": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.02,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "particle-vortex": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.65,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "pixelated-rain": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.22,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "planetary-rings": {
+      "animates": false,
+      "compile": "pass",
+      "contrast": 13.24,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "plasma-field": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.34,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "power-grid": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.69,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "psychedelic-waves": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 4.98,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "pulsar": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.94,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "purple-cyberspace": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.86,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "purple-fire": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.8,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "purple-matrix": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 13.1,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "quantum-gateway": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.19,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "quantum-particles": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.69,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "quasar": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.49,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "rain-on-glass": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.86,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "rainstorm": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.01,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "rainy-window": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.94,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "realistic-fire": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.95,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "reality-break": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 4.42,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "reality-warp": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 1.09,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "redstone-pulse": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.33,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "retrowave": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.23,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "rgb-split": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.4,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "rusted-steel": {
+      "animates": false,
+      "compile": "pass",
+      "contrast": 7.06,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "sacred-geometry": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.42,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "screen-tear": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 1.12,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "sculk-energy": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.05,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "signal-interference": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.2,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "snowfall": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.15,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "solar-flare": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.14,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "soul-fire": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.46,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "spiral-galaxy": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.55,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "star-dust": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.14,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "starfield": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 13.26,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "stormy-sea": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.43,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "sunrise": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.83,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "sunset": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.51,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "supernova": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.19,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "synthwave-sunset": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.56,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "tesla-coil": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 12.38,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "thunderstorm": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 9.16,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "time-vortex": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.42,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "titanium": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.3,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "tropical-water": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 4.66,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "ufo-energy": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.45,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "underwater-caustics": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.41,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "void-portal": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.01,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "voronoi": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 7.59,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "warp-speed": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 10.39,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "water-refraction": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.08,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "water-ripples": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 8.42,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "waterfall": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 5.08,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "wormhole": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 6.54,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    },
+    "xenomorph-atmosphere": {
+      "animates": true,
+      "compile": "pass",
+      "contrast": 11.46,
+      "date": "2026-10-18",
+      "ghostty_render": "pass",
+      "ghostty_version": "1.3.1",
+      "renderer": "ghostty",
+      "visible": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+# The 180 shader ids required by the GhostFX v1 catalogue.
+ocean-waves deep-ocean underwater-caustics stormy-sea tropical-water rain-on-glass water-ripples water-refraction ocean-at-night bioluminescent-ocean waterfall liquid-surface
+realistic-fire blue-fire green-fire purple-fire hellfire campfire-embers solar-flare lava-flow molten-core plasma-field inferno heat-haze
+floating-particles fireflies snowfall falling-leaves cherry-blossoms magic-dust particle-vortex star-dust digital-particles ashfall particle-trails quantum-particles
+ender-portal nether-portal end-dimension nether-atmosphere enchantment-table redstone-pulse sculk-energy soul-fire obsidian-crystals beacon-beam experience-orbs pixelated-rain
+classic-crt curved-crt green-phosphor amber-terminal blue-phosphor crt-flicker crt-glitch crt-vhs crt-rgb-mask crt-bloom crt-interlaced crt-static crt-broken crt-arcade crt-terminal-1980
+digital-glitch rgb-split datamosh signal-interference corrupted-memory cyber-glitch glitch-rain screen-tear compression-artifacts hologram-glitch broken-gpu reality-break
+alien-interface ufo-energy xenomorph-atmosphere alien-language extraterrestrial-signal biomechanical alien-planet holographic-scanner alien-technology extraterrestrial-portal cosmic-organism alien-radar
+starfield warp-speed black-hole accretion-disk spiral-galaxy nebula supernova cosmic-dust planetary-rings meteor-shower pulsar quasar aurora-space wormhole event-horizon
+frosted-glass liquid-glass glossy-reflection glass-ripples glass-shimmer ice-glass cracked-glass rainy-window glass-prism holographic-glass mirror-surface glass-distortion
+lightning electric-arcs tesla-coil electric-blue electric-purple energy-shield power-grid electric-storm neon-current electromagnetic-field ionized-plasma electric-circuit
+liquid-metal chrome brushed-steel titanium gold-metal copper-metal molten-metal rusted-steel metallic-waves iridescent-metal carbon-fiber machinery
+matrix-rain purple-matrix cyberpunk-city neon-grid synthwave-sunset retrowave hacker-terminal cybernetic-hud digital-tunnel neon-pulse cyber-rain purple-cyberspace
+northern-lights thunderstorm rainstorm fog clouds sunrise sunset forest-light desert-heat blizzard misty-mountains moonlight
+lava-lamp metaballs fractal-zoom mandelbrot julia-set kaleidoscope sacred-geometry voronoi hexagonal-grid infinite-tunnel psychedelic-waves liquid-gradient
+dimensional-rift void-portal time-vortex quantum-gateway dream-portal reality-warp

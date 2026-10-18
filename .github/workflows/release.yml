@@ -1,0 +1,60 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y glslang-tools spirv-cross
+      - run: pip install build -e ".[dev]"
+      - name: Gate on a fully validated collection
+        run: |
+          pytest -q
+          ghostfx manifest --check
+          test "$(cat VERSION)" = "${GITHUB_REF_NAME#v}"
+      - name: Python sdist + wheel
+        run: python -m build --outdir dist-release
+      - name: Single-file CLI (zipapp, needs Python >= 3.11)
+        run: |
+          mkdir -p pyz && pip install --no-deps --target pyz dist-release/*.whl
+          python -m zipapp pyz -m "ghostfx.cli:main" -p "/usr/bin/env python3" -o dist-release/ghostfx.pyz
+          python dist-release/ghostfx.pyz version
+      - name: Shader collection archives
+        run: |
+          ghostfx build --all --presets --legacy --out shaders-build/ghostfx-shaders
+          cp LICENSE README.md shaders-build/ghostfx-shaders/
+          tar -C shaders-build -czf dist-release/ghostfx-shaders-${GITHUB_REF_NAME}.tar.gz ghostfx-shaders
+          (cd shaders-build && zip -qr ../dist-release/ghostfx-shaders-${GITHUB_REF_NAME}.zip ghostfx-shaders)
+          git archive --format=tar.gz --prefix=ghostfx-${GITHUB_REF_NAME}/ -o dist-release/ghostfx-source-${GITHUB_REF_NAME}.tar.gz HEAD
+      - name: Checksums
+        run: cd dist-release && sha256sum * > SHA256SUMS
+      - name: Release notes
+        run: |
+          python3 - <<'PY' > notes.md
+          import json, re
+          m = json.load(open("manifest.json"))
+          v = json.load(open("tests/verification.json"))
+          ok = sum(1 for s in v["shaders"].values() if s.get("ghostty_render") == "pass")
+          log = open("CHANGELOG.md").read()
+          tag = __import__("os").environ["GITHUB_REF_NAME"].lstrip("v")
+          sec = re.search(rf"## \[{re.escape(tag)}\].*?(?=\n## \[|\Z)", log, re.S)
+          print(sec.group(0) if sec else f"GhostFX {tag}")
+          print(f"\n**{m['shader_count']} shaders** · compiled through Ghostty's pipeline (SPIR-V → GLSL 430 + MSL) · "
+                f"{ok} rendered in Ghostty {v.get('ghostty_version')} ({v.get('environment')}).")
+          print("\nmacOS/Metal: shaders cross-compile to MSL; runtime testing on a Mac is still pending.")
+          PY
+      - uses: softprops/action-gh-release@v2
+        with:
+          body_path: notes.md
+          files: dist-release/*
+          prerelease: ${{ startsWith(github.ref_name, 'v0.') }}

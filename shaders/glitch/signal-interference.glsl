@@ -15,8 +15,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float t = gfx_time();
     float wave = sin(uv.y * 60.0 + t * 8.0) * sin(uv.y * 7.0 - t * 1.3) * P_WAVE * 2.0 * gfx_dpi() / iResolution.x;
     vec2 suv = uv + vec2(wave * GFX_DISTORT_TEXT, 0.0);
-    vec4 term = gfx_term(uv);
-    vec3 col = gfx_straight(gfx_term(suv));
+    vec4 term = gfx_term(suv);
+    vec3 col = gfx_straight(term);
     // Noise bars rolling upward, tinted.
     float bar = smoothstep(0.7, 1.0, vnoise(vec2(uv.y * 12.0 - t * 2.0, t * 0.5)));
     float n = hash12(fragCoord * 0.5 + floor(t * 30.0));

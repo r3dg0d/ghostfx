@@ -35,6 +35,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 c = (cuv - 0.5) * vec2(gfx_aspect(), 1.0);
     col += vec3(0.05) * smoothstep(0.35, 0.0, length(c - vec2(-0.35, 0.25))) * 0.8;
     float d = sd_box(c, vec2(0.5 * gfx_aspect(), 0.5) - 0.07) - 0.07;
-    col = mix(vec3(0.03, 0.035, 0.03), col * vignette(cuv, 0.6), 1.0 - smoothstep(-0.002, 0.002, d));
-    fragColor = gfx_post(term, col);
+    float inside = 1.0 - smoothstep(-0.002, 0.002, d);
+    col = mix(vec3(0.03, 0.035, 0.03), col * vignette(cuv, 0.6), inside);
+    fragColor = gfx_post_k(term, col, mix(1.0, GFX_INTENSITY, inside));
 }

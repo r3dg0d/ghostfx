@@ -1,0 +1,12 @@
+# GhostFX palette: Gold Chrome
+# Apply with: ghostfx apply <shader> --palette gold-chrome
+name = "Gold Chrome"
+
+[colors]
+primary = "#F5C451"
+secondary = "#2A1A05"
+accent = "#FFF3C9"
+# background/foreground are only used by legacy builds (Ghostty < 1.3),
+# which cannot read the terminal colours from uniforms.
+background = "#0F0A03"
+foreground = "#FFF6DD"

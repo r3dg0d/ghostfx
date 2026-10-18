@@ -21,7 +21,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 c = suv - 0.5;
     vec2 off = c * dot(c, c) * 0.03 * P_DAMAGE + vec2(0.0015, 0.0) * P_DAMAGE;
     vec3 col = vec3(gfx_term(suv + off).r, gfx_term(suv).g, gfx_term(suv - off * vec2(1.0, -0.6)).b);
-    vec4 term = gfx_term(uv);
+    vec4 term = gfx_term(suv);
 
     // Purity blotches from a magnetised shadow mask.
     vec2 q = uv * vec2(gfx_aspect(), 1.0) * 2.0;

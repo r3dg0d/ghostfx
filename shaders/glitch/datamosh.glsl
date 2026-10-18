@@ -22,8 +22,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 mv = (hash22(blk + era) - 0.5) * vec2(3.0, 1.5) * bs * fract(t * 0.8);
     vec2 within = fract(fragCoord / bs);
     vec2 src = (blk * bs + within * bs * mix(1.0, 0.3, mosh) - mv * mosh) / iResolution.xy;
-    vec4 term = gfx_term(uv);
-    vec3 col = gfx_straight(gfx_term(mix(uv, src, mosh)));
+    vec4 term = gfx_term(mix(uv, src, mosh));
+    vec3 col = gfx_straight(term);
     // Chroma bleeds from the neighbouring block.
     vec3 nb = gfx_straight(gfx_term((blk + vec2(1.0, 0.0) + 0.5) * bs / iResolution.xy));
     float l = gfx_luma(col);

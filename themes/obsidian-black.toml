@@ -1,0 +1,12 @@
+# GhostFX palette: Obsidian Black
+# Apply with: ghostfx apply <shader> --palette obsidian-black
+name = "Obsidian Black"
+
+[colors]
+primary = "#6B5B95"
+secondary = "#050407"
+accent = "#B8A9E0"
+# background/foreground are only used by legacy builds (Ghostty < 1.3),
+# which cannot read the terminal colours from uniforms.
+background = "#030305"
+foreground = "#D9D4E6"

@@ -1,0 +1,89 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  shaders:
+    name: Shaders & CLI (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install glslang + SPIRV-Cross
+        run: |
+          if [ "$RUNNER_OS" = "Linux" ]; then
+            sudo apt-get update && sudo apt-get install -y glslang-tools spirv-cross
+          else
+            brew install glslang spirv-cross
+          fi
+      - run: pip install -e ".[dev]"
+      - name: Lint
+        run: ruff check tools tests
+      - name: Unit tests + Ghostty-pipeline compilation of every shader
+        run: pytest -q
+      - name: Validate all shaders (JSON report)
+        run: ghostfx validate --json > validate-report.json
+      - name: Manifest is valid and current
+        run: ghostfx manifest --check
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validate-report-${{ matrix.os }}
+          path: validate-report.json
+
+  assets:
+    name: Preview assets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Every shader has a thumbnail and a verification record
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+          m = json.load(open("manifest.json"))
+          v = json.load(open("tests/verification.json"))["shaders"]
+          bad = [s["id"] for s in m["shaders"] if not os.path.exists(f"thumbnails/{s['id']}.webp")]
+          unverified = [s["id"] for s in m["shaders"] if s["id"] not in v]
+          big = [f for f in os.listdir("thumbnails") if os.path.getsize(f"thumbnails/{f}") > 250_000]
+          print(f"{len(m['shaders'])} shaders, missing thumbnails: {bad}, unverified: {unverified}, oversized: {big}")
+          sys.exit(1 if bad or big else 0)
+          PY
+
+  nix:
+    name: Nix flake
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: cachix/install-nix-action@v31
+      - run: nix flake check -L
+      - run: nix build .#ghostfx -L && ./result/bin/ghostfx version
+      - run: nix build .#shaders -L && ls result/share/ghostfx/shaders | head
+
+  website:
+    name: Gallery website
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npm run typecheck

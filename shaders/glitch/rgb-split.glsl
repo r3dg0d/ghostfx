@@ -18,6 +18,6 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float fall = mix(1.0, smoothstep(0.0, 0.8, r), P_CENTER);
     vec2 dir = vec2(cos(t * 0.3), sin(t * 0.3));
     vec2 off = (dir * 0.5 + normalize(c + 1e-4) * 0.5) * P_AMOUNT * gfx_dpi() * fall / iResolution.xy;
-    vec3 col = term_chroma(uv, off * GFX_DISTORT_TEXT);
-    fragColor = gfx_post(gfx_term(uv), col);
+    vec3 col = term_chroma(uv, off * GFX_DISTORT_TEXT * GFX_INTENSITY);
+    fragColor = gfx_post_k(gfx_term(uv), col, 1.0);
 }

@@ -1,0 +1,12 @@
+# GhostFX palette: Electric Blue
+# Apply with: ghostfx apply <shader> --palette electric-blue
+name = "Electric Blue"
+
+[colors]
+primary = "#3D8BFF"
+secondary = "#041233"
+accent = "#CFE6FF"
+# background/foreground are only used by legacy builds (Ghostty < 1.3),
+# which cannot read the terminal colours from uniforms.
+background = "#020611"
+foreground = "#E2EEFF"

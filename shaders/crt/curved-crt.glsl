@@ -31,5 +31,5 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec3 bezel = vec3(0.045, 0.045, 0.05) * (0.8 + 0.4 * (0.5 - bc.y));
     bezel += gfx_straight(gfx_term(clamp(cuv, 0.0, 1.0))) * 0.06 * exp(-max(d, 0.0) * 60.0);
     col = mix(bezel, col, inside);
-    fragColor = gfx_post(term, col);
+    fragColor = gfx_post_k(term, col, mix(1.0, GFX_INTENSITY, inside));
 }

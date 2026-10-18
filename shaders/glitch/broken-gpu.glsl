@@ -17,7 +17,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float era = floor(t * 1.5);
     vec4 term = gfx_term(uv);
     vec3 col = gfx_straight(term);
-    float D = P_CHAOS * GFX_DISTORT_TEXT;
+    float D = P_CHAOS * GFX_DISTORT_TEXT * GFX_INTENSITY;
 
     // Stretched stripes: a column's pixels repeat one source row.
     float colId = floor(uv.x * 40.0);
@@ -39,5 +39,5 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
         float tri = step(sd_triangle(q, 0.12), 0.0);
         col = mix(col, vec3(hash11(fi + era * 2.0), hash11(fi + 9.0), hash11(era - fi)), tri * gfx_flash(1.0));
     }
-    fragColor = gfx_post(term, col);
+    fragColor = gfx_post_k(term, col, 1.0);
 }

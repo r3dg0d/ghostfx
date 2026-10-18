@@ -22,7 +22,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float tor = sd_box(p - top, vec2(0.09, 0.012)) - 0.012;
     col = mix(col, vec3(0.5, 0.5, 0.55), smoothstep(0.003, 0.0, tor));
 
-    float tick = floor(t * 14.0);
+    float tick = floor(t * (GFX_REDUCED_FLASH > 0.5 ? 2.5 : 14.0));
     for (int i = 0; i < P_STREAMERS; i++) {
         float fi = float(i);
         float h = hash11(tick * 0.13 + fi * 7.1);

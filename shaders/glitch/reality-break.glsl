@@ -26,7 +26,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     // Slight per-shard rotation about the screen centre.
     vec2 suv = (gfx_rot((v.z - 0.5) * 0.06 * D) * (uv - 0.5)) + 0.5 + off;
     vec3 col = term_chroma(suv, vec2(0.004 * D, 0.0));
-    vec4 term = gfx_term(uv);
+    vec4 term = gfx_term(suv);
     float seam = smoothstep(0.03, 0.0, edge);
     col = mix(col, mix(GFX_PRIMARY, GFX_ACCENT, v.z), seam * (0.4 + 0.6 * P_SHATTER));
     col += mix(GFX_PRIMARY, GFX_ACCENT, v.z) * glow(edge, 0.01) * 0.25 * P_SHATTER;

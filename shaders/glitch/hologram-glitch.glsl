@@ -17,7 +17,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float jit = step(0.93, hash11(floor(t * 8.0))) * (hash11(floor(t * 30.0)) - 0.5) * 0.01 * GFX_DISTORT_TEXT;
     float lineJ = (hash12(vec2(floor(uv.y * 90.0), floor(t * 20.0))) - 0.5) * 0.0015 * GFX_DISTORT_TEXT;
     vec2 suv = uv + vec2(jit + lineJ, 0.0);
-    vec4 term = gfx_term(uv);
+    vec4 term = gfx_term(suv);
     float bgl = gfx_luma(GFX_TERM_BG);
     float e = clamp((gfx_luma(gfx_straight(gfx_term(suv))) - bgl) / max(1.0 - bgl, 0.2), 0.0, 1.0);
     // Ghost copy offset upward.

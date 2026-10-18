@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ghostfx"
+dynamic = ["version"]
+description = "GhostFX: 180+ animated GLSL shaders and a safe installer CLI for the Ghostty terminal"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "GhostFX Contributors" }]
+keywords = ["ghostty", "glsl", "shaders", "terminal", "visual-effects"]
+classifiers = [
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3",
+  "Topic :: Terminals :: Terminal Emulators/X Terminals",
+]
+dependencies = []
+
+[project.optional-dependencies]
+preview = ["moderngl>=5.8", "numpy>=1.24", "pillow>=10"]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.scripts]
+ghostfx = "ghostfx.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/r3dg0d/ghostfx"
+Issues = "https://github.com/r3dg0d/ghostfx/issues"
+
+[tool.hatch.version]
+path = "tools/ghostfx/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["tools/ghostfx"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"shaders" = "ghostfx/data/shaders"
+"glsl" = "ghostfx/data/glsl"
+"themes" = "ghostfx/data/themes"
+"compat" = "ghostfx/data/compat"
+"scripts/ghostty-capture.sh" = "ghostfx/data/scripts/ghostty-capture.sh"
+"examples/demo-terminal.sh" = "ghostfx/data/examples/demo-terminal.sh"
+"tests/fixtures" = "ghostfx/data/tests/fixtures"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tools"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+src = ["tools"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "B008", "UP038"]

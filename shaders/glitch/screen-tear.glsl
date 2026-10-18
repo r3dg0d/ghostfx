@@ -16,11 +16,11 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float cycle = floor(t * P_SPEED_TEAR);
     float tear = 1.0 - fract(t * P_SPEED_TEAR);
     float above = step(tear, uv.y);
-    float sh = (hash11(cycle) - 0.5) * 2.0 * P_SHEAR * GFX_DISTORT_TEXT;
+    float sh = (hash11(cycle) - 0.5) * 2.0 * P_SHEAR * GFX_DISTORT_TEXT * GFX_INTENSITY;
     vec2 suv = vec2(fract(uv.x + sh * above), uv.y);
-    vec4 term = gfx_term(uv);
-    vec3 col = gfx_straight(gfx_term(suv));
+    vec4 term = gfx_term(suv);
+    vec3 col = gfx_straight(term);
     float edge = exp(-abs(uv.y - tear) * iResolution.y / (1.5 * gfx_dpi()));
-    col += vec3(0.25) * edge;
-    fragColor = gfx_post(term, col);
+    col += vec3(0.25) * edge * GFX_INTENSITY;
+    fragColor = gfx_post_k(term, col, 1.0);
 }

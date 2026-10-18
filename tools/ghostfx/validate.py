@@ -90,6 +90,9 @@ def static_checks(src: str, rep: Report) -> None:
     ):
         if re.search(rf"\b{u}\b", code):
             rep.warnings.append(f"uses {u}: {why}")
+    reserved = re.findall(r"\b(?:float|int|vec[234]|bool)\s+(active|sample|filter|input|output|common|partition|patch|subroutine|noperspective|superp)\b", code)
+    for w in sorted(set(reserved)):
+        rep.errors.append(f"'{w}' is a reserved word in GLSL 4.30 / ES 3.00; rename the variable")
     if re.search(r"\biFrameRate\b", code):
         rep.warnings.append("uses iFrameRate: fixed at 60 in Ghostty")
 

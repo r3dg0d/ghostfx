@@ -79,6 +79,16 @@ mat2 gfx_rot(float a) { float c = cos(a), s = sin(a); return mat2(c, s, -s, c); 
 float gfx_luma(vec3 c) { return dot(c, vec3(0.2126, 0.7152, 0.0722)); }
 
 // ---------------------------------------------------------------------------
+// Cursor (Ghostty >= 1.2). iCurrentCursor.xy is the cursor's top-left corner
+// in fragCoord pixels, .zw its size.
+// ---------------------------------------------------------------------------
+
+vec2 gfx_cursor_center() { return iCurrentCursor.xy + vec2(0.5, -0.5) * iCurrentCursor.zw; }
+
+// Real seconds since the cursor last moved or changed colour (i.e. typing).
+float gfx_cursor_age() { return max(iTime - iTimeCursorChange, 0.0); }
+
+// ---------------------------------------------------------------------------
 // Colour space
 // ---------------------------------------------------------------------------
 // With `alpha-blending = linear | linear-corrected` (Ghostty's default on
@@ -250,6 +260,15 @@ vec4 gfx_post(vec4 term, vec3 col) {
     vec3 base = gfx_straight(term);
     col = mix(base, gfx_grade(col), GFX_INTENSITY);
     return gfx_output(col, max(term.a, GFX_OPACITY * GFX_INTENSITY));
+}
+
+// Post mode for effects that move pixels. `base` must be the terminal sampled
+// at the SAME displaced position as `col`, otherwise cross-fading by
+// intensity would show a ghosted double image. `k` is the blend amount
+// (usually GFX_INTENSITY; 1.0 for opaque parts such as a CRT bezel).
+vec4 gfx_post_k(vec4 base, vec3 col, float k) {
+    col = mix(gfx_straight(base), gfx_grade(col), clamp(k, 0.0, 1.0));
+    return gfx_output(col, max(base.a, GFX_OPACITY * k));
 }
 
 // Offset applied to the terminal lookup by distortion shaders. With

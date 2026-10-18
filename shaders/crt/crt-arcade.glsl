@@ -17,10 +17,10 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec4 term = gfx_term(cuv);
     vec3 col = gfx_straight(term);
     float l = gfx_luma(col);
-    col = max(mix(vec3(l), col, P_SATURATE), 0.0) + term_bloom(cuv, 3.0) * 0.3;
+    col = max(mix(vec3(l), col, P_SATURATE), 0.0) + max(term_bloom(cuv, 3.0) - GFX_TERM_BG, 0.0) * 0.4;
     col *= shadow_mask(fragCoord, 0.45);
     col *= scanline(cuv.y * iResolution.y, 1.0 / (4.0 * gfx_dpi()), 0.5);
-    col *= 1.45;
+    col *= 1.2;
 
     vec2 c = (cuv - 0.5) * vec2(gfx_aspect(), 1.0);
     float d = sd_box(c, vec2(0.5 * gfx_aspect(), 0.5) - 0.03) - 0.03;
@@ -29,5 +29,5 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec3 edge = term_bloom(clamp(cuv, 0.02, 0.98), 30.0);
     vec3 bezel = vec3(0.02) + edge * 0.35 * exp(-max(d, 0.0) * 25.0);
     col = mix(bezel, col, inside);
-    fragColor = gfx_post(term, col);
+    fragColor = gfx_post_k(term, col, mix(1.0, GFX_INTENSITY, inside));
 }

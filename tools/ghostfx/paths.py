@@ -19,6 +19,9 @@ def data_root() -> Path:
     for cand in (here / "data", here.parent.parent):
         if (cand / "shaders").is_dir() and (cand / "glsl").is_dir():
             return cand
+    zipped = _extract_from_zipapp(here)
+    if zipped:
+        return zipped
     raise FileNotFoundError(
         "GhostFX data directory not found; set GHOSTFX_DATA to the repository root"
     )
@@ -29,12 +32,14 @@ def xdg_config_home() -> Path:
 
 
 def ghostty_config_candidates() -> list[Path]:
-    """Config files Ghostty reads, in the order Ghostty loads them."""
-    cands = [xdg_config_home() / "ghostty" / "config"]
+    """Config files Ghostty reads. Ghostty >= 1.2 prefers `config.ghostty`
+    and still loads the legacy `config`; on macOS the Application Support
+    directory is read as well."""
+    x = xdg_config_home() / "ghostty"
+    cands = [x / "config.ghostty", x / "config"]
     if platform.system() == "Darwin":
-        cands.append(
-            Path.home() / "Library" / "Application Support" / "com.mitchellh.ghostty" / "config"
-        )
+        app = Path.home() / "Library" / "Application Support" / "com.mitchellh.ghostty"
+        cands += [app / "config.ghostty", app / "config"]
     return cands
 
 
@@ -47,7 +52,8 @@ def ghostty_config_path() -> Path:
     for c in ghostty_config_candidates():
         if c.exists():
             return c
-    return ghostty_config_candidates()[0]
+    # Nothing exists yet: the legacy name is read by every Ghostty release.
+    return xdg_config_home() / "ghostty" / "config"
 
 
 def ghostfx_home() -> Path:
@@ -72,3 +78,26 @@ def backup_dir() -> Path:
 
 def state_file() -> Path:
     return ghostfx_home() / "state.json"
+
+
+def _extract_from_zipapp(here: Path) -> Path | None:
+    """Running from ghostfx.pyz: unpack the bundled data once into a cache."""
+    import zipfile
+
+    from . import __version__
+
+    archive = next((p for p in here.parents if p.is_file() and zipfile.is_zipfile(p)), None)
+    if archive is None:
+        return None
+    cache = Path(os.environ.get("XDG_CACHE_HOME") or Path.home() / ".cache") / "ghostfx" / f"data-{__version__}"
+    if not (cache / "shaders").is_dir():
+        with zipfile.ZipFile(archive) as z:
+            for name in z.namelist():
+                if name.startswith("ghostfx/data/") and not name.endswith("/"):
+                    dest = cache / name[len("ghostfx/data/"):]
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    dest.write_bytes(z.read(name))
+        script = cache / "scripts" / "ghostty-capture.sh"
+        if script.exists():
+            script.chmod(0o755)
+    return cache

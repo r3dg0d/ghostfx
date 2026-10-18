@@ -19,8 +19,6 @@ vec3 yiq2rgb(vec3 c) {
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 uv = gfx_uv(fragCoord);
     float t = gfx_time();
-    vec4 term = gfx_term(uv);
-
     // Line wobble and the tracking band.
     float wob = (vnoise(vec2(uv.y * 40.0, t * 3.0)) - 0.5) * 1.5 / iResolution.x;
     float bandY = fract(t * 0.05);
@@ -29,7 +27,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 suv = uv + vec2(wob * GFX_DISTORT_TEXT, 0.0);
 
     // Sharp luma, smeared chroma.
-    vec3 yiq = rgb2yiq(gfx_straight(gfx_term(suv)));
+    vec4 term = gfx_term(suv);
+    vec3 yiq = rgb2yiq(gfx_straight(term));
     vec2 chroma = vec2(0.0);
     float bw = 2.5 * P_BLEED * gfx_dpi() / iResolution.x;
     for (int i = 0; i < 6; i++) {

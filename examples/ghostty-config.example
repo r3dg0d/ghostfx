@@ -1,0 +1,6 @@
+# Using a pre-built shader without the CLI:
+#   1. copy dist/<category>/<id>.glsl somewhere, e.g. ~/.config/ghostty/shaders/
+#   2. point Ghostty at it:
+custom-shader = ~/.config/ghostty/shaders/ender-portal.glsl
+# Optional: keep animating while unfocused (costs power).
+# custom-shader-animation = always

@@ -118,6 +118,7 @@ class Shader:
     author: str = "GhostFX Contributors"
     license: str = "MIT"
     version: str = "1.0.0"
+    added: str = "2026-10-18"
     body: str = ""
 
     @property
@@ -248,6 +249,7 @@ def parse_shader(path: Path) -> Shader:
         author=fields.get("author", "GhostFX Contributors"),
         license=fields.get("license", "MIT"),
         version=fields.get("version", "1.0.0"),
+        added=fields.get("added", "2026-10-18"),
         body="\n".join(body_lines).strip() + "\n",
     )
 

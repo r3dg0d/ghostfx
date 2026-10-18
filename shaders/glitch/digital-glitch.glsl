@@ -20,11 +20,12 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float rows = 6.0 + floor(hash11(tick) * 30.0);
     float row = floor(uv.y * rows);
     float h = hash12(vec2(row, tick));
-    float on = burst * step(0.75, h) * GFX_DISTORT_TEXT;
-    float shift = (floor(hash12(vec2(row, tick + 1.0)) * 8.0) / 8.0 - 0.5) * 2.0 * P_SHIFT * on;
+    // Between bursts a few rows still twitch slightly, so the effect never vanishes.
+    float idle = (1.0 - burst) * step(0.97, h) * 0.15;
+    float on = max(burst * step(0.75, h), idle) * GFX_DISTORT_TEXT;
+    float shift = (floor(hash12(vec2(row, tick + 1.0)) * 8.0) / 8.0 - 0.5) * 2.0 * P_SHIFT * on * (0.4 + 0.6 * GFX_INTENSITY);
     vec2 suv = vec2(fract(uv.x + shift), uv.y);
-    vec3 col = term_chroma(suv, vec2(0.003 * on, 0.0));
-    vec4 term = gfx_term(uv);
+    vec3 col = term_chroma(suv, vec2(0.003 * on + 0.0006 * GFX_INTENSITY, 0.0));
     col += on * gfx_flash(0.08) * vec3(0.3, 0.0, 0.4);
-    fragColor = gfx_post(term, col);
+    fragColor = gfx_post_k(gfx_term(suv), col, 1.0);
 }

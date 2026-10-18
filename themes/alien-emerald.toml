@@ -1,0 +1,12 @@
+# GhostFX palette: Alien Emerald
+# Apply with: ghostfx apply <shader> --palette alien-emerald
+name = "Alien Emerald"
+
+[colors]
+primary = "#2BE38B"
+secondary = "#02170D"
+accent = "#B6FF5C"
+# background/foreground are only used by legacy builds (Ghostty < 1.3),
+# which cannot read the terminal colours from uniforms.
+background = "#010B06"
+foreground = "#D8FFE9"

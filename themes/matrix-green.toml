@@ -1,0 +1,12 @@
+# GhostFX palette: Matrix Green
+# Apply with: ghostfx apply <shader> --palette matrix-green
+name = "Matrix Green"
+
+[colors]
+primary = "#3BFF6B"
+secondary = "#00140A"
+accent = "#D9FFE3"
+# background/foreground are only used by legacy builds (Ghostty < 1.3),
+# which cannot read the terminal colours from uniforms.
+background = "#000A03"
+foreground = "#C8FFD6"

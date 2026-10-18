@@ -25,7 +25,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 suv = uv + vec2(shift, 0.0);
     float ca = 0.004 * on * P_STRENGTH;
     vec3 col = term_chroma(suv, vec2(ca, 0.0));
-    vec4 term = gfx_term(uv);
+    vec4 term = gfx_term(suv);
 
     // Block noise inside some glitch bands.
     vec2 blk = floor(fragCoord / (12.0 * gfx_dpi()));

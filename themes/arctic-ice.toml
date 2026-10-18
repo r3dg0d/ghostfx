@@ -1,0 +1,12 @@
+# GhostFX palette: Arctic Ice
+# Apply with: ghostfx apply <shader> --palette arctic-ice
+name = "Arctic Ice"
+
+[colors]
+primary = "#9FE1FF"
+secondary = "#0B2236"
+accent = "#FFFFFF"
+# background/foreground are only used by legacy builds (Ghostty < 1.3),
+# which cannot read the terminal colours from uniforms.
+background = "#06121D"
+foreground = "#E8F7FF"

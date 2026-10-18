@@ -14,7 +14,7 @@ here=$(cd "$(dirname "$0")/.." && pwd)
 tmp=$(mktemp -d); trap 'kill ${gpid:-} ${xpid:-} 2>/dev/null || true; rm -rf "$tmp"' EXIT
 
 if [[ -z "${GFX_CAPTURE_DISPLAY:-}" ]]; then
-  disp=":$(( 100 + RANDOM % 400 ))"
+  disp="${GFX_CAPTURE_DISPNUM:-:$(( 100 + RANDOM % 400 ))}"
   Xvfb "$disp" -screen 0 "${W}x${H}x24" >/dev/null 2>&1 & xpid=$!
   sleep 1.5
 else
@@ -45,6 +45,13 @@ if [[ "$shader" != "-" ]] && ! grep -q "loaded custom shader" "$tmp/log"; then
 fi
 if grep -qiE "shader.*(error|fail)|spirv error" "$tmp/log"; then
   grep -iE "shader|spirv" "$tmp/log" >&2; exit 2
+fi
+if [[ -n "${GFX_CAPTURE_RECORD:-}" ]]; then
+  # Record an animated clip instead of stills: OUT_PREFIX.mp4
+  ffmpeg -y -loglevel error -f x11grab -draw_mouse 0 -framerate "${GFX_CAPTURE_FPS:-15}" -video_size "${W}x${H}" -i "$disp" \
+    -t "$GFX_CAPTURE_RECORD" -pix_fmt yuv420p "$out.mp4"
+  cp "$tmp/log" "$out.log"
+  exit 0
 fi
 for ((i = 0; i < frames; i++)); do
   ffmpeg -y -loglevel error -f x11grab -draw_mouse 0 -video_size "${W}x${H}" -i "$disp" -frames:v 1 "$out-$i.png"

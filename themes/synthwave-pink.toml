@@ -1,0 +1,12 @@
+# GhostFX palette: Synthwave Pink
+# Apply with: ghostfx apply <shader> --palette synthwave-pink
+name = "Synthwave Pink"
+
+[colors]
+primary = "#FF3EA5"
+secondary = "#1A0530"
+accent = "#FFD319"
+# background/foreground are only used by legacy builds (Ghostty < 1.3),
+# which cannot read the terminal colours from uniforms.
+background = "#0D0318"
+foreground = "#FFE6F4"

@@ -1,0 +1,12 @@
+# GhostFX palette: Cyberpunk Purple
+# Apply with: ghostfx apply <shader> --palette cyberpunk-purple
+name = "Cyberpunk Purple"
+
+[colors]
+primary = "#A855F7"
+secondary = "#2E1065"
+accent = "#F0ABFC"
+# background/foreground are only used by legacy builds (Ghostty < 1.3),
+# which cannot read the terminal colours from uniforms.
+background = "#0B0614"
+foreground = "#EDE4FF"

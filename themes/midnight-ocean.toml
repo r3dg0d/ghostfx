@@ -1,0 +1,12 @@
+# GhostFX palette: Midnight Ocean
+# Apply with: ghostfx apply <shader> --palette midnight-ocean
+name = "Midnight Ocean"
+
+[colors]
+primary = "#1E88B5"
+secondary = "#03111F"
+accent = "#8FE3FF"
+# background/foreground are only used by legacy builds (Ghostty < 1.3),
+# which cannot read the terminal colours from uniforms.
+background = "#020A12"
+foreground = "#D6EEF7"
