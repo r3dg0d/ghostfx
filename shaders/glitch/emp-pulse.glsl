@@ -8,14 +8,14 @@
 // @flashing true
 // @distorts true
 // @color PRIMARY #7AD7FF
-// @param PERIOD float 7.0 3.0 30.0 Seconds between pulses
+// @param PERIOD float 5.0 3.0 30.0 Seconds between pulses
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 uv = gfx_uv(fragCoord);
     vec2 p = gfx_p(fragCoord);
     float t = gfx_time();
     float age = mod(t, P_PERIOD);
-    float R = age * 0.9;
+    float R = age / P_PERIOD * 1.15;          // the front spans the whole period, corner to corner
     float r = length(p);
     float front = exp(-pow((r - R) * 25.0, 2.0));
     float wake = smoothstep(R, R - 0.25, r) * exp(-age * 1.2) * step(r, R);

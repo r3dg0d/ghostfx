@@ -229,11 +229,14 @@ def reload_ghostty() -> str:
     """
     if os.uname().sysname == "Darwin":
         return "press cmd+shift+, in Ghostty to reload the configuration"
-    try:
-        out = subprocess.run(["pgrep", "-x", "ghostty"], capture_output=True, text=True)
-        pids = [int(p) for p in out.stdout.split()]
-    except (OSError, ValueError):
-        pids = []
+    if os.environ.get("GHOSTFX_GHOSTTY_PID"):            # target one instance (tests, scripts)
+        pids = [int(x) for x in os.environ["GHOSTFX_GHOSTTY_PID"].split(",") if x.strip()]
+    else:
+        try:
+            out = subprocess.run(["pgrep", "-x", "ghostty"], capture_output=True, text=True)
+            pids = [int(p) for p in out.stdout.split()]
+        except (OSError, ValueError):
+            pids = []
     if not pids:
         return "Ghostty is not running; the shader loads on next start"
     for pid in pids:

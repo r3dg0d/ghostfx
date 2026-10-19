@@ -142,8 +142,8 @@ def _clean(log: str, path: Path) -> str:
 def validate_file(path: Path) -> Report:
     """Validate a raw Ghostty shader file or a GhostFX source shader."""
     text = path.read_text(encoding="utf-8")
-    from .meta import parse_shader
     from .build import build_shader
+    from .meta import parse_shader
 
     if re.search(r"^//\s*@id\b", text, re.M):
         sh = parse_shader(path)

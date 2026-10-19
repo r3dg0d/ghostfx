@@ -18,7 +18,7 @@
 #define GFX_QUALITY 1
 #define GFX_COLORSPACE 0
 #define GFX_COLORSPACE_FALLBACK 2
-#define P_PERIOD 7.0
+#define P_PERIOD 5.0
 #define GFX_PRIMARY vec3(0.4784, 0.8431, 1.0000)
 #define GFX_SECONDARY vec3(0.2980, 0.1137, 0.5843)
 #define GFX_ACCENT vec3(0.7529, 0.5176, 0.9882)
@@ -401,7 +401,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 p = gfx_p(fragCoord);
     float t = gfx_time();
     float age = mod(t, P_PERIOD);
-    float R = age * 0.9;
+    float R = age / P_PERIOD * 1.15;          // the front spans the whole period, corner to corner
     float r = length(p);
     float front = exp(-pow((r - R) * 25.0, 2.0));
     float wake = smoothstep(R, R - 0.25, r) * exp(-age * 1.2) * step(r, R);

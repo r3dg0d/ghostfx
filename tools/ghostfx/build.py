@@ -8,7 +8,7 @@ uses and prepends its parameters as #defines.
 from __future__ import annotations
 
 import re
-from functools import lru_cache
+from functools import cache
 from pathlib import Path
 
 from . import __version__
@@ -24,7 +24,7 @@ class Module:
         self.name, self.path, self.requires, self.code = name, path, requires, code
 
 
-@lru_cache(maxsize=None)
+@cache
 def _modules(root: str) -> dict[str, Module]:
     mods: dict[str, Module] = {}
     for p in sorted((Path(root) / "glsl").rglob("*.glsl")):

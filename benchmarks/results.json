@@ -1,0 +1,769 @@
+{
+  "date": "2026-10-19",
+  "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "host": "x86_64",
+  "note": "software rasteriser: CPU-bound, use for relative ranking only",
+  "method": "ghostfx benchmark: GL_TIME_ELAPSED per frame, balanced preset, terminal fixture as iChannel0",
+  "shaders": {
+    "classic-crt": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 73.0737,
+        "gpu_ms_p95": 77.4026,
+        "wall_ms_mean": 74.5756,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 131.8258,
+        "gpu_ms_p95": 146.6233,
+        "wall_ms_mean": 135.4256,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 179.3335,
+        "gpu_ms_p95": 189.2483,
+        "wall_ms_mean": 183.3637,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 286.6883,
+        "gpu_ms_p95": 291.8506,
+        "wall_ms_mean": 287.8151,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "fog": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 101.5657,
+        "gpu_ms_p95": 106.3894,
+        "wall_ms_mean": 103.3365,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 171.7658,
+        "gpu_ms_p95": 175.4258,
+        "wall_ms_mean": 173.415,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 238.2826,
+        "gpu_ms_p95": 253.2977,
+        "wall_ms_mean": 242.2099,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 407.2334,
+        "gpu_ms_p95": 442.0354,
+        "wall_ms_mean": 416.7854,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "liquid-gradient": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 73.6058,
+        "gpu_ms_p95": 77.5051,
+        "wall_ms_mean": 73.8382,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 125.9071,
+        "gpu_ms_p95": 129.8509,
+        "wall_ms_mean": 126.6556,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 165.3484,
+        "gpu_ms_p95": 171.4159,
+        "wall_ms_mean": 167.0322,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 283.3149,
+        "gpu_ms_p95": 287.0542,
+        "wall_ms_mean": 280.7545,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "ender-portal": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 102.7601,
+        "gpu_ms_p95": 108.6629,
+        "wall_ms_mean": 104.7674,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 184.8821,
+        "gpu_ms_p95": 199.4074,
+        "wall_ms_mean": 187.4715,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 254.0847,
+        "gpu_ms_p95": 260.9013,
+        "wall_ms_mean": 255.2931,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 431.598,
+        "gpu_ms_p95": 458.165,
+        "wall_ms_mean": 430.4612,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "matrix-rain": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 63.9619,
+        "gpu_ms_p95": 71.1343,
+        "wall_ms_mean": 65.1682,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 111.834,
+        "gpu_ms_p95": 119.1426,
+        "wall_ms_mean": 114.2172,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 153.2227,
+        "gpu_ms_p95": 163.0957,
+        "wall_ms_mean": 153.5389,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 238.7447,
+        "gpu_ms_p95": 248.7752,
+        "wall_ms_mean": 240.9191,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "starfield": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 72.7612,
+        "gpu_ms_p95": 75.9066,
+        "wall_ms_mean": 74.2748,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 141.7699,
+        "gpu_ms_p95": 144.1184,
+        "wall_ms_mean": 134.4004,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 181.2625,
+        "gpu_ms_p95": 202.1744,
+        "wall_ms_mean": 184.7684,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 285.5482,
+        "gpu_ms_p95": 300.849,
+        "wall_ms_mean": 288.2994,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "ocean-waves": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 130.1116,
+        "gpu_ms_p95": 137.3752,
+        "wall_ms_mean": 130.9341,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 217.6289,
+        "gpu_ms_p95": 226.1855,
+        "wall_ms_mean": 219.6785,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 290.6992,
+        "gpu_ms_p95": 302.3124,
+        "wall_ms_mean": 293.7211,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 503.4264,
+        "gpu_ms_p95": 515.3023,
+        "wall_ms_mean": 505.1397,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "realistic-fire": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 95.1576,
+        "gpu_ms_p95": 99.244,
+        "wall_ms_mean": 96.8171,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 178.0837,
+        "gpu_ms_p95": 190.7548,
+        "wall_ms_mean": 178.2036,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 229.1058,
+        "gpu_ms_p95": 241.0965,
+        "wall_ms_mean": 231.6913,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 379.9024,
+        "gpu_ms_p95": 398.6451,
+        "wall_ms_mean": 389.7385,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "nebula": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 106.4968,
+        "gpu_ms_p95": 108.6985,
+        "wall_ms_mean": 106.2334,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 191.7326,
+        "gpu_ms_p95": 198.9735,
+        "wall_ms_mean": 193.5987,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 241.062,
+        "gpu_ms_p95": 252.1606,
+        "wall_ms_mean": 243.0664,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 401.9725,
+        "gpu_ms_p95": 413.0476,
+        "wall_ms_mean": 402.1777,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "black-hole": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 71.7598,
+        "gpu_ms_p95": 74.401,
+        "wall_ms_mean": 73.012,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 129.1454,
+        "gpu_ms_p95": 138.0148,
+        "wall_ms_mean": 131.0046,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 190.0565,
+        "gpu_ms_p95": 203.7186,
+        "wall_ms_mean": 188.7399,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 283.8384,
+        "gpu_ms_p95": 294.3664,
+        "wall_ms_mean": 288.997,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "liquid-glass": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 76.1956,
+        "gpu_ms_p95": 79.1244,
+        "wall_ms_mean": 77.117,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 128.4075,
+        "gpu_ms_p95": 134.0804,
+        "wall_ms_mean": 130.4092,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 178.2996,
+        "gpu_ms_p95": 183.307,
+        "wall_ms_mean": 178.018,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 287.4725,
+        "gpu_ms_p95": 297.389,
+        "wall_ms_mean": 289.7436,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "lightning": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 88.3445,
+        "gpu_ms_p95": 93.7223,
+        "wall_ms_mean": 88.4216,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 139.4377,
+        "gpu_ms_p95": 146.5063,
+        "wall_ms_mean": 140.2746,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 192.4849,
+        "gpu_ms_p95": 202.5685,
+        "wall_ms_mean": 196.1348,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 330.4498,
+        "gpu_ms_p95": 349.5136,
+        "wall_ms_mean": 331.1973,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "liquid-metal": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 73.623,
+        "gpu_ms_p95": 83.7868,
+        "wall_ms_mean": 75.6171,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 135.7704,
+        "gpu_ms_p95": 136.9498,
+        "wall_ms_mean": 132.8581,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 182.8771,
+        "gpu_ms_p95": 196.0972,
+        "wall_ms_mean": 184.7314,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 292.2673,
+        "gpu_ms_p95": 308.7075,
+        "wall_ms_mean": 293.4481,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "northern-lights": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 81.4436,
+        "gpu_ms_p95": 84.6149,
+        "wall_ms_mean": 82.6116,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 157.4959,
+        "gpu_ms_p95": 176.8067,
+        "wall_ms_mean": 160.6973,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 189.3972,
+        "gpu_ms_p95": 197.661,
+        "wall_ms_mean": 191.5258,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 322.858,
+        "gpu_ms_p95": 339.8387,
+        "wall_ms_mean": 328.1562,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "digital-glitch": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 42.4123,
+        "gpu_ms_p95": 42.7666,
+        "wall_ms_mean": 42.3124,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 79.4833,
+        "gpu_ms_p95": 85.3301,
+        "wall_ms_mean": 79.0369,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 101.6281,
+        "gpu_ms_p95": 107.2665,
+        "wall_ms_mean": 102.1102,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 157.7131,
+        "gpu_ms_p95": 163.3554,
+        "wall_ms_mean": 162.085,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "alien-interface": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 60.5225,
+        "gpu_ms_p95": 62.6058,
+        "wall_ms_mean": 61.5344,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 107.5012,
+        "gpu_ms_p95": 109.7927,
+        "wall_ms_mean": 108.1667,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 147.1818,
+        "gpu_ms_p95": 157.3504,
+        "wall_ms_mean": 150.0234,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 228.9768,
+        "gpu_ms_p95": 234.1973,
+        "wall_ms_mean": 233.0024,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "fractal-zoom": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 126.9393,
+        "gpu_ms_p95": 133.7184,
+        "wall_ms_mean": 127.9214,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 235.8385,
+        "gpu_ms_p95": 253.5088,
+        "wall_ms_mean": 236.3156,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 269.1865,
+        "gpu_ms_p95": 278.9796,
+        "wall_ms_mean": 269.2035,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 476.2475,
+        "gpu_ms_p95": 486.1052,
+        "wall_ms_mean": 477.8369,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "underwater-caustics": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 107.5269,
+        "gpu_ms_p95": 112.0807,
+        "wall_ms_mean": 109.3635,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 177.6044,
+        "gpu_ms_p95": 179.7414,
+        "wall_ms_mean": 178.4425,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 246.4959,
+        "gpu_ms_p95": 249.7181,
+        "wall_ms_mean": 244.8419,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 403.3715,
+        "gpu_ms_p95": 407.8814,
+        "wall_ms_mean": 403.2471,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "hexagonal-grid": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 71.3082,
+        "gpu_ms_p95": 77.8878,
+        "wall_ms_mean": 72.0591,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 109.184,
+        "gpu_ms_p95": 115.7302,
+        "wall_ms_mean": 109.9482,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 152.9194,
+        "gpu_ms_p95": 155.6337,
+        "wall_ms_mean": 152.6995,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 249.4168,
+        "gpu_ms_p95": 265.3245,
+        "wall_ms_mean": 251.871,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    },
+    "reality-break": {
+      "1920x1080": {
+        "width": 1920,
+        "height": 1080,
+        "frames": 10,
+        "gpu_ms_median": 120.9333,
+        "gpu_ms_p95": 127.1133,
+        "wall_ms_mean": 123.2615,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "2560x1440": {
+        "width": 2560,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 214.0009,
+        "gpu_ms_p95": 266.1509,
+        "wall_ms_mean": 225.3625,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3440x1440": {
+        "width": 3440,
+        "height": 1440,
+        "frames": 10,
+        "gpu_ms_median": 300.1812,
+        "gpu_ms_p95": 327.1754,
+        "wall_ms_mean": 302.1701,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      },
+      "3840x2160": {
+        "width": 3840,
+        "height": 2160,
+        "frames": 10,
+        "gpu_ms_median": 492.6516,
+        "gpu_ms_p95": 534.6942,
+        "wall_ms_mean": 504.1907,
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)"
+      }
+    }
+  }
+}

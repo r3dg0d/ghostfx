@@ -1,0 +1,24 @@
+name: Bug report
+description: Something is broken (CLI, a shader, the gallery)
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes: { label: What happened?, description: Include the command you ran and its output. }
+    validations: { required: true }
+  - type: input
+    id: shader
+    attributes: { label: Shader id (if any), placeholder: ender-portal }
+  - type: input
+    id: ghostty
+    attributes: { label: Ghostty version, description: "`ghostty +version`" }
+    validations: { required: true }
+  - type: input
+    id: platform
+    attributes: { label: OS / GPU / compositor, placeholder: "NixOS 25.11, RTX 4090, Hyprland" }
+  - type: textarea
+    id: doctor
+    attributes: { label: "`ghostfx doctor --json` output", render: json }
+  - type: textarea
+    id: log
+    attributes: { label: Ghostty log lines (shadertoy / spirv), render: text }

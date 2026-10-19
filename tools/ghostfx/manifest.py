@@ -36,7 +36,8 @@ def capabilities(shader: Shader) -> list[str]:
     return caps
 
 
-def entry(shader: Shader, verification: dict, benchmarks: dict, previews_root: Path, order: int = 0) -> dict:
+def entry(shader: Shader, verification: dict, benchmarks: dict, previews_root: Path, order: int = 0, bench_meta: dict | None = None) -> dict:
+    bench_meta = bench_meta or {}
     v = verification.get(shader.id, {})
     b = benchmarks.get(shader.id)
     previews = {}
@@ -89,7 +90,11 @@ def entry(shader: Shader, verification: dict, benchmarks: dict, previews_root: P
             "ghostty_version": v.get("ghostty_version"),
             "checked": v.get("date"),
         },
-        "benchmark": b if b else {"status": "not-benchmarked"},
+        "benchmark": (
+            {"status": "measured", "renderer": bench_meta.get("renderer"), "note": bench_meta.get("note"),
+             "results": {k: {"gpu_ms_median": r["gpu_ms_median"], "gpu_ms_p95": r["gpu_ms_p95"]} for k, r in b.items()}}
+            if b else {"status": "not-benchmarked"}
+        ),
         "previews": previews,
     }
 
@@ -98,7 +103,9 @@ def build_manifest(root: Path | None = None) -> dict:
     root = root or data_root()
     shaders = load_all(root)
     verification = _load_json(root / "tests" / "verification.json").get("shaders", {})
-    benchmarks = _load_json(root / "benchmarks" / "results.json").get("shaders", {})
+    bench_all = _load_json(root / "benchmarks" / "results.json")
+    benchmarks = bench_all.get("shaders", {})
+    bench_meta = {"renderer": bench_all.get("renderer"), "note": bench_all.get("note")}
     return {
         "$schema": "./docs/manifest.schema.json",
         "schema_version": SCHEMA_VERSION,
@@ -112,7 +119,7 @@ def build_manifest(root: Path | None = None) -> dict:
             for k, (t, d, lo, hi, desc) in COMMON_PARAMS.items()
         ],
         "categories": {k: {"name": v, "count": sum(1 for s in shaders if s.category == k)} for k, v in CATEGORIES.items() if any(s.category == k for s in shaders)},
-        "shaders": [entry(s, verification, benchmarks, root, i) for i, s in enumerate(shaders)],
+        "shaders": [entry(s, verification, benchmarks, root, i, bench_meta) for i, s in enumerate(shaders)],
     }
 
 

@@ -17,6 +17,8 @@ v1.2.3 and v1.3.1 and `main` (October 2026), and confirmed by running Ghostty
 * Changes apply on config reload (no restart needed). On Linux/GTK Ghostty
   reloads its config on **SIGUSR2**; macOS uses the "Reload Configuration"
   menu item / `cmd+shift+,`. There is no file-watch hot reload.
+  (`scripts/e2e-ghostty.sh` checks this against a live Ghostty: `ghostfx apply`
+  → SIGUSR2 → the running terminal switches shader; `ghostfx disable` reverts it.)
 
 ## 2. Language and entry point
 

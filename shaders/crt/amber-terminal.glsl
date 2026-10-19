@@ -4,6 +4,7 @@
 // @description A warm amber monochrome monitor whose slow phosphor leaves a faint smear trailing below the text.
 // @tags crt, amber, monochrome, retro, warm
 // @mode post
+// @animated false
 // @uses crt
 // @color PRIMARY #FFB000
 // @color SECONDARY #140A00

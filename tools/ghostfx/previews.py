@@ -16,10 +16,10 @@ from __future__ import annotations
 import datetime as _dt
 import json
 import os
+import queue
 import shutil
 import subprocess
 import tempfile
-import queue
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -152,6 +152,15 @@ def generate(args) -> int:
         base_diff = ImageChops.difference(a, baseline.convert("RGB")).convert("L")
         rec["visible"] = sum(base_diff.point(lambda v: 255 if v > 4 else 0).histogram()[255:]) / (a.width * a.height) > 0.01
         rec["contrast"] = contrast_metric(a, baseline)
+        rec["contrast_build"] = "balanced"
+        if s.distorts_text and args.backend == "ghostty":
+            # Moved glyphs no longer line up with the reference capture, so
+            # measure the text-locked variant (distort_text = 0) instead.
+            locked = build.build_shader(s, overrides={"DISTORT_TEXT": 0})
+            ok2, _ = capture_retry(locked, work / f"{s.id}-locked", 1, 1, disp)
+            if ok2:
+                rec["contrast"] = contrast_metric(Image.open(work / f"{s.id}-locked-0.png").convert("RGB"), baseline)
+                rec["contrast_build"] = "balanced, distort_text=0"
         rec["ghostty_render"] = "pass" if args.backend == "ghostty" and rec["visible"] else ("fail" if args.backend == "ghostty" else "n/a")
         if getattr(args, "full", False):
             a.save(prev / f"{s.id}.png", optimize=True)

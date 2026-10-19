@@ -1,0 +1,26 @@
+name: Shader idea / submission
+description: Propose a new shader (or announce a PR adding one)
+labels: [shader]
+body:
+  - type: input
+    id: name
+    attributes: { label: Shader name and id, placeholder: "Aurora Borealis (northern-lights)" }
+    validations: { required: true }
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [ocean, fire, particles, minecraft, crt, glitch, alien, space, glass, electric, metallic, cyberpunk, matrix, nature, liquid, geometric, portals, experimental]
+    validations: { required: true }
+  - type: textarea
+    id: look
+    attributes: { label: What does it look like? What technique makes it distinct from existing shaders? }
+    validations: { required: true }
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: The work is original or MIT-compatible with attribution
+        - label: Text stays readable with the balanced preset
+        - label: Flashes use gfx_flash(); text movement uses gfx_text_offset()

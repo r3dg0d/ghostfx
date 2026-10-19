@@ -50,3 +50,9 @@ def test_distorting_shaders_respect_distort_text():
     for s in meta.load_all():
         if s.distorts_text:
             assert re.search(r"gfx_text_offset|GFX_DISTORT_TEXT", s.body), s.id
+
+
+def test_readme_states_the_real_shader_count():
+    readme = (HERE.parent / "README.md").read_text()
+    n = len(meta.load_all())
+    assert f"{n} original" in readme and f"{n} distinct shaders" in readme

@@ -46,6 +46,8 @@ packages = ["tools/ghostfx"]
 "scripts/ghostty-capture.sh" = "ghostfx/data/scripts/ghostty-capture.sh"
 "examples/demo-terminal.sh" = "ghostfx/data/examples/demo-terminal.sh"
 "tests/fixtures" = "ghostfx/data/tests/fixtures"
+"manifest.json" = "ghostfx/data/manifest.json"
+"VERSION" = "ghostfx/data/VERSION"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -58,4 +60,4 @@ src = ["tools"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP"]
-ignore = ["E501", "B008", "UP038"]
+ignore = ["E501", "B008", "E741"]

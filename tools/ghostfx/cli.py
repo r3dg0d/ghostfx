@@ -224,7 +224,7 @@ def cmd_info(args) -> int:
         print(f"  Mode:      {s.mode}{' · distorts text' if s.distorts_text else ''}{' · contains flashes' if s.flashing else ''}")
         print(f"  Tags:      {', '.join(s.tags)}")
         print(f"  Presets:   {', '.join(s.presets)}")
-        print(f"  Colors:    " + "  ".join(f"{k.lower()}={v}" for k, v in colors.items() if k in ('PRIMARY', 'SECONDARY', 'ACCENT')))
+        print("  Colors:    " + "  ".join(f"{k.lower()}={v}" for k, v in colors.items() if k in ('PRIMARY', 'SECONDARY', 'ACCENT')))
         if s.params:
             print("  Parameters:")
             for p in s.params.values():

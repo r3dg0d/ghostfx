@@ -13,7 +13,7 @@ reduced_motion = false
 reduced_flash = false
 distort_text = false
 quality = "balanced"
-period = 7.0
+period = 5.0
 [presets.subtle.colors]
 primary = "#7AD7FF"
 secondary = "#4C1D95"
@@ -30,7 +30,7 @@ reduced_motion = false
 reduced_flash = false
 distort_text = true
 quality = "balanced"
-period = 7.0
+period = 5.0
 [presets.balanced.colors]
 primary = "#7AD7FF"
 secondary = "#4C1D95"
@@ -47,7 +47,7 @@ reduced_motion = false
 reduced_flash = false
 distort_text = true
 quality = "ultra"
-period = 7.0
+period = 5.0
 [presets.cinematic.colors]
 primary = "#7AD7FF"
 secondary = "#4C1D95"

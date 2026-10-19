@@ -13,7 +13,7 @@
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 uv = gfx_uv(fragCoord);
     float k = P_CURVE * GFX_DISTORT_TEXT;
-    vec2 cuv = barrel((uv - 0.5) * (1.0 + k * 0.8) * 1.04 + 0.5, k);
+    vec2 cuv = barrel((uv - 0.5) * (1.0 + k * 0.8 + 0.04 * GFX_DISTORT_TEXT) + 0.5, k);
     vec4 term = gfx_term(cuv);
     vec3 col = gfx_straight(term);
     float l = gfx_luma(col);

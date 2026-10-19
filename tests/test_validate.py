@@ -1,8 +1,8 @@
 import pytest
-
 from conftest import needs_glslang
+
 from ghostfx import build, meta
-from ghostfx.validate import static_checks, validate_source, Report
+from ghostfx.validate import Report, static_checks, validate_source
 
 
 @needs_glslang

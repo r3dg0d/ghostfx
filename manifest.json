@@ -258,21 +258,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.35,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/alien-artifact.webp"
+      }
     },
     {
       "id": "alien-interface",
@@ -347,15 +349,36 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 12.02,
+        "readability_contrast": 12.01,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 60.5225,
+            "gpu_ms_p95": 62.6058
+          },
+          "2560x1440": {
+            "gpu_ms_median": 107.5012,
+            "gpu_ms_p95": 109.7927
+          },
+          "3440x1440": {
+            "gpu_ms_median": 147.1818,
+            "gpu_ms_p95": 157.3504
+          },
+          "3840x2160": {
+            "gpu_ms_median": 228.9768,
+            "gpu_ms_p95": 234.1973
+          }
+        }
       },
       "previews": {
-        "thumbnail": "thumbnails/alien-interface.webp"
+        "thumbnail": "thumbnails/alien-interface.webp",
+        "animated": "previews/alien-interface.webp"
       }
     },
     {
@@ -795,7 +818,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.19,
+        "readability_contrast": 9.23,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -878,7 +901,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 6.53,
+        "readability_contrast": 6.52,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -956,21 +979,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.14,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/cybernetic-eye.webp"
+      }
     },
     {
       "id": "extraterrestrial-portal",
@@ -1206,21 +1231,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.75,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/holo-projector.webp"
+      }
     },
     {
       "id": "holographic-scanner",
@@ -1303,7 +1330,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.82,
+        "readability_contrast": 9.78,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -1396,7 +1423,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 8.45,
+        "readability_contrast": 8.53,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -1502,7 +1529,7 @@
       "source": "shaders/crt/amber-terminal.glsl",
       "dist": "dist/crt/amber-terminal.glsl",
       "mode": "post",
-      "animated": true,
+      "animated": false,
       "flashing": false,
       "distorts_text": false,
       "reduced_motion": true,
@@ -1556,8 +1583,7 @@
         "crt"
       ],
       "required_capabilities": [
-        "terminal-texture",
-        "animation"
+        "terminal-texture"
       ],
       "min_ghostty": "1.3.0",
       "legacy_build": "1.2.0",
@@ -1570,7 +1596,7 @@
       "verification": {
         "compile": "pass",
         "ghostty_render": "pass",
-        "animates": false,
+        "animates": null,
         "readability_contrast": 8.46,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
@@ -1664,7 +1690,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.6,
+        "readability_contrast": 9.49,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -1792,7 +1818,27 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 73.0737,
+            "gpu_ms_p95": 77.4026
+          },
+          "2560x1440": {
+            "gpu_ms_median": 131.8258,
+            "gpu_ms_p95": 146.6233
+          },
+          "3440x1440": {
+            "gpu_ms_median": 179.3335,
+            "gpu_ms_p95": 189.2483
+          },
+          "3840x2160": {
+            "gpu_ms_median": 286.6883,
+            "gpu_ms_p95": 291.8506
+          }
+        }
       },
       "previews": {
         "thumbnail": "thumbnails/classic-crt.webp",
@@ -1891,7 +1937,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": null,
-        "readability_contrast": 1.18,
+        "readability_contrast": 8.95,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -2190,7 +2236,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.56,
+        "readability_contrast": 7.69,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -2301,7 +2347,8 @@
         "status": "not-benchmarked"
       },
       "previews": {
-        "thumbnail": "thumbnails/crt-glitch.webp"
+        "thumbnail": "thumbnails/crt-glitch.webp",
+        "animated": "previews/crt-glitch.webp"
       }
     },
     {
@@ -2393,7 +2440,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.09,
+        "readability_contrast": 6.93,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -2472,21 +2519,23 @@
       ],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": false,
+        "readability_contrast": 10.01,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/crt-power.webp"
+      }
     },
     {
       "id": "crt-rgb-mask",
@@ -2682,7 +2731,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 6.31,
+        "readability_contrast": 6.24,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -2778,7 +2827,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": false,
-        "readability_contrast": 1.04,
+        "readability_contrast": 7.95,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -2881,7 +2930,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 6.65,
+        "readability_contrast": 7.13,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -2996,7 +3045,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": null,
-        "readability_contrast": 1.13,
+        "readability_contrast": 6.59,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -3088,7 +3137,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": false,
-        "readability_contrast": 9.67,
+        "readability_contrast": 9.75,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -3165,21 +3214,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 11.13,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/oscilloscope.webp"
+      }
     },
     {
       "id": "retro-dos",
@@ -3245,21 +3296,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
+        "compile": "pass",
+        "ghostty_render": "pass",
         "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "readability_contrast": 12.29,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/retro-dos.webp"
+      }
     },
     {
       "id": "retro-radar",
@@ -3338,21 +3391,23 @@
       ],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.21,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/retro-radar.webp"
+      }
     },
     {
       "id": "test-pattern",
@@ -3419,21 +3474,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
+        "compile": "pass",
+        "ghostty_render": "pass",
         "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "readability_contrast": 7.76,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/test-pattern.webp"
+      }
     },
     {
       "id": "vhs-horror",
@@ -3502,21 +3559,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 6.59,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/vhs-horror.webp"
+      }
     },
     {
       "id": "cockpit-hud",
@@ -3584,21 +3643,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.14,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/cockpit-hud.webp"
+      }
     },
     {
       "id": "cyber-rain",
@@ -3672,7 +3733,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 11.28,
+        "readability_contrast": 11.29,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -3931,7 +3992,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.14,
+        "readability_contrast": 6.07,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -4012,21 +4073,23 @@
       ],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.07,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/keyboard-glow.webp"
+      }
     },
     {
       "id": "neon-grid",
@@ -4119,7 +4182,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 8.66,
+        "readability_contrast": 8.63,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -4221,8 +4284,8 @@
       "verification": {
         "compile": "pass",
         "ghostty_render": "pass",
-        "animates": true,
-        "readability_contrast": 11.9,
+        "animates": false,
+        "readability_contrast": 11.83,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -4306,7 +4369,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 10.86,
+        "readability_contrast": 10.73,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -4381,21 +4444,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 7.62,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/purple-smoke.webp"
+      }
     },
     {
       "id": "retrowave",
@@ -4478,7 +4543,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 8.23,
+        "readability_contrast": 8.28,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -4639,21 +4704,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 5.57,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/vaporwave-clouds.webp"
+      }
     },
     {
       "id": "circuit-growth",
@@ -4729,21 +4796,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.0,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/circuit-growth.webp"
+      }
     },
     {
       "id": "containment-field",
@@ -4810,21 +4879,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 11.27,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/containment-field.webp"
+      }
     },
     {
       "id": "electric-arcs",
@@ -4910,7 +4981,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.89,
+        "readability_contrast": 9.09,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -4992,7 +5063,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 12.06,
+        "readability_contrast": 11.97,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -5259,7 +5330,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 11.3,
+        "readability_contrast": 11.34,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -5351,7 +5422,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 11.67,
+        "readability_contrast": 11.65,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -5445,7 +5516,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.92,
+        "readability_contrast": 9.82,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -5628,10 +5699,31 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 88.3445,
+            "gpu_ms_p95": 93.7223
+          },
+          "2560x1440": {
+            "gpu_ms_median": 139.4377,
+            "gpu_ms_p95": 146.5063
+          },
+          "3440x1440": {
+            "gpu_ms_median": 192.4849,
+            "gpu_ms_p95": 202.5685
+          },
+          "3840x2160": {
+            "gpu_ms_median": 330.4498,
+            "gpu_ms_p95": 349.5136
+          }
+        }
       },
       "previews": {
-        "thumbnail": "thumbnails/lightning.webp"
+        "thumbnail": "thumbnails/lightning.webp",
+        "animated": "previews/lightning.webp"
       }
     },
     {
@@ -5716,7 +5808,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 10.76,
+        "readability_contrast": 10.77,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -5804,21 +5896,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.61,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/neural-network.webp"
+      }
     },
     {
       "id": "plasma-globe",
@@ -5896,21 +5990,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 11.68,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/plasma-globe.webp"
+      }
     },
     {
       "id": "power-grid",
@@ -6074,21 +6170,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 9.73,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/purple-lightning.webp"
+      }
     },
     {
       "id": "reactor-core",
@@ -6155,21 +6253,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 11.7,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/reactor-core.webp"
+      }
     },
     {
       "id": "tesla-coil",
@@ -6255,7 +6355,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 12.38,
+        "readability_contrast": 12.21,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -6342,21 +6442,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": false,
+        "readability_contrast": 12.99,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/boot-sequence.webp"
+      }
     },
     {
       "id": "console-startup",
@@ -6434,21 +6536,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": false,
+        "readability_contrast": 13.3,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/console-startup.webp"
+      }
     },
     {
       "id": "digital-heartbeat",
@@ -6526,21 +6630,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.02,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/digital-heartbeat.webp"
+      }
     },
     {
       "id": "dna-helix",
@@ -6606,21 +6712,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.74,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/dna-helix.webp"
+      }
     },
     {
       "id": "ghost-apparition",
@@ -6689,21 +6797,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 11.91,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/ghost-apparition.webp"
+      }
     },
     {
       "id": "haunted-terminal",
@@ -6771,21 +6881,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 10.39,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/haunted-terminal.webp"
+      }
     },
     {
       "id": "holo-ghost",
@@ -6854,21 +6966,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.1,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/holo-ghost.webp"
+      }
     },
     {
       "id": "liquid-nitrogen",
@@ -6936,21 +7050,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 7.12,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/liquid-nitrogen.webp"
+      }
     },
     {
       "id": "nanotech-assembly",
@@ -7026,21 +7142,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.08,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/nanotech-assembly.webp"
+      }
     },
     {
       "id": "neon-veins",
@@ -7107,21 +7225,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.27,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/neon-veins.webp"
+      }
     },
     {
       "id": "nuclear-reactor",
@@ -7189,21 +7309,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 6.46,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/nuclear-reactor.webp"
+      }
     },
     {
       "id": "oled-black",
@@ -7271,21 +7393,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.5,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/oled-black.webp"
+      }
     },
     {
       "id": "quantum-foam",
@@ -7352,21 +7476,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 11.34,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/quantum-foam.webp"
+      }
     },
     {
       "id": "radiation-field",
@@ -7443,21 +7569,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 11.93,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/radiation-field.webp"
+      }
     },
     {
       "id": "spectral-rainbow",
@@ -7524,21 +7652,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 7.82,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/spectral-rainbow.webp"
+      }
     },
     {
       "id": "typing-ripples",
@@ -7607,21 +7737,23 @@
       ],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": false,
+        "readability_contrast": 10.46,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/typing-ripples.webp"
+      }
     },
     {
       "id": "blue-fire",
@@ -7899,7 +8031,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 5.48,
+        "readability_contrast": 5.49,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -8189,7 +8321,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 5.28,
+        "readability_contrast": 5.25,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -8282,7 +8414,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 5.74,
+        "readability_contrast": 5.75,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -8365,7 +8497,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 10.87,
+        "readability_contrast": 10.91,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -8649,10 +8781,31 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 95.1576,
+            "gpu_ms_p95": 99.244
+          },
+          "2560x1440": {
+            "gpu_ms_median": 178.0837,
+            "gpu_ms_p95": 190.7548
+          },
+          "3440x1440": {
+            "gpu_ms_median": 229.1058,
+            "gpu_ms_p95": 241.0965
+          },
+          "3840x2160": {
+            "gpu_ms_median": 379.9024,
+            "gpu_ms_p95": 398.6451
+          }
+        }
       },
       "previews": {
-        "thumbnail": "thumbnails/realistic-fire.webp"
+        "thumbnail": "thumbnails/realistic-fire.webp",
+        "animated": "previews/realistic-fire.webp"
       }
     },
     {
@@ -8817,21 +8970,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 8.56,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/blueprint.webp"
+      }
     },
     {
       "id": "fractal-flames",
@@ -8898,21 +9053,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 6.33,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/fractal-flames.webp"
+      }
     },
     {
       "id": "fractal-zoom",
@@ -8997,12 +9154,32 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 6.52,
+        "readability_contrast": 6.62,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 126.9393,
+            "gpu_ms_p95": 133.7184
+          },
+          "2560x1440": {
+            "gpu_ms_median": 235.8385,
+            "gpu_ms_p95": 253.5088
+          },
+          "3440x1440": {
+            "gpu_ms_median": 269.1865,
+            "gpu_ms_p95": 278.9796
+          },
+          "3840x2160": {
+            "gpu_ms_median": 476.2475,
+            "gpu_ms_p95": 486.1052
+          }
+        }
       },
       "previews": {
         "thumbnail": "thumbnails/fractal-zoom.webp"
@@ -9091,12 +9268,32 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 5.82,
+        "readability_contrast": 5.77,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 71.3082,
+            "gpu_ms_p95": 77.8878
+          },
+          "2560x1440": {
+            "gpu_ms_median": 109.184,
+            "gpu_ms_p95": 115.7302
+          },
+          "3440x1440": {
+            "gpu_ms_median": 152.9194,
+            "gpu_ms_p95": 155.6337
+          },
+          "3840x2160": {
+            "gpu_ms_median": 249.4168,
+            "gpu_ms_p95": 265.3245
+          }
+        }
       },
       "previews": {
         "thumbnail": "thumbnails/hexagonal-grid.webp"
@@ -9183,21 +9380,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 7.14,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/hypnotic-spiral.webp"
+      }
     },
     {
       "id": "infinite-tunnel",
@@ -9362,7 +9561,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 5.3,
+        "readability_contrast": 5.31,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -9456,7 +9655,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.55,
+        "readability_contrast": 9.56,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -9548,7 +9747,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 5.42,
+        "readability_contrast": 5.43,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -9812,21 +10011,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.49,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/black-ice.webp"
+      }
     },
     {
       "id": "chromatic-glass",
@@ -9904,21 +10105,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 6.33,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/chromatic-glass.webp"
+      }
     },
     {
       "id": "cracked-glass",
@@ -10020,7 +10223,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 11.7,
+        "readability_contrast": 11.81,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -10201,7 +10404,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.83,
+        "readability_contrast": 11.84,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -10386,7 +10589,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 5.28,
+        "readability_contrast": 5.55,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -10570,7 +10773,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.54,
+        "readability_contrast": 7.63,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -10750,7 +10953,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.75,
+        "readability_contrast": 7.79,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -10827,21 +11030,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 8.46,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/ice-shards.webp"
+      }
     },
     {
       "id": "liquid-glass",
@@ -10937,15 +11142,36 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 8.8,
+        "readability_contrast": 9.68,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 76.1956,
+            "gpu_ms_p95": 79.1244
+          },
+          "2560x1440": {
+            "gpu_ms_median": 128.4075,
+            "gpu_ms_p95": 134.0804
+          },
+          "3440x1440": {
+            "gpu_ms_median": 178.2996,
+            "gpu_ms_p95": 183.307
+          },
+          "3840x2160": {
+            "gpu_ms_median": 287.4725,
+            "gpu_ms_p95": 297.389
+          }
+        }
       },
       "previews": {
-        "thumbnail": "thumbnails/liquid-glass.webp"
+        "thumbnail": "thumbnails/liquid-glass.webp",
+        "animated": "previews/liquid-glass.webp"
       }
     },
     {
@@ -11013,21 +11239,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 9.57,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/liquid-hologram.webp"
+      }
     },
     {
       "id": "mirror-dimension",
@@ -11094,21 +11322,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.84,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/mirror-dimension.webp"
+      }
     },
     {
       "id": "mirror-surface",
@@ -11388,7 +11618,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.95,
+        "readability_contrast": 10.01,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -11768,7 +11998,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 6.96,
+        "readability_contrast": 10.01,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -11878,10 +12108,31 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 42.4123,
+            "gpu_ms_p95": 42.7666
+          },
+          "2560x1440": {
+            "gpu_ms_median": 79.4833,
+            "gpu_ms_p95": 85.3301
+          },
+          "3440x1440": {
+            "gpu_ms_median": 101.6281,
+            "gpu_ms_p95": 107.2665
+          },
+          "3840x2160": {
+            "gpu_ms_median": 157.7131,
+            "gpu_ms_p95": 163.3554
+          }
+        }
       },
       "previews": {
-        "thumbnail": "thumbnails/digital-glitch.webp"
+        "thumbnail": "thumbnails/digital-glitch.webp",
+        "animated": "previews/digital-glitch.webp"
       }
     },
     {
@@ -11939,7 +12190,7 @@
         {
           "name": "PERIOD",
           "type": "float",
-          "default": 7.0,
+          "default": 5.0,
           "min": 3.0,
           "max": 30.0,
           "description": "Seconds between pulses",
@@ -11959,21 +12210,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 9.9,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/emp-pulse.webp"
+      }
     },
     {
       "id": "glitch-rain",
@@ -12046,7 +12299,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 11.07,
+        "readability_contrast": 11.04,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -12129,7 +12382,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.18,
+        "readability_contrast": 12.42,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -12206,21 +12459,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 6.55,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/interdimensional-static.webp"
+      }
     },
     {
       "id": "pixel-sort",
@@ -12307,21 +12562,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 10.01,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/pixel-sort.webp"
+      }
     },
     {
       "id": "reality-break",
@@ -12419,12 +12676,32 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 4.42,
+        "readability_contrast": 9.35,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 120.9333,
+            "gpu_ms_p95": 127.1133
+          },
+          "2560x1440": {
+            "gpu_ms_median": 214.0009,
+            "gpu_ms_p95": 266.1509
+          },
+          "3440x1440": {
+            "gpu_ms_median": 300.1812,
+            "gpu_ms_p95": 327.1754
+          },
+          "3840x2160": {
+            "gpu_ms_median": 492.6516,
+            "gpu_ms_p95": 534.6942
+          }
+        }
       },
       "previews": {
         "thumbnail": "thumbnails/reality-break.webp"
@@ -12521,7 +12798,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.4,
+        "readability_contrast": 10.01,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -12622,7 +12899,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 1.12,
+        "readability_contrast": 10.09,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -12724,7 +13001,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 8.2,
+        "readability_contrast": 9.41,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -12819,7 +13096,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 5.47,
+        "readability_contrast": 5.48,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -12907,7 +13184,27 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 73.6058,
+            "gpu_ms_p95": 77.5051
+          },
+          "2560x1440": {
+            "gpu_ms_median": 125.9071,
+            "gpu_ms_p95": 129.8509
+          },
+          "3440x1440": {
+            "gpu_ms_median": 165.3484,
+            "gpu_ms_p95": 171.4159
+          },
+          "3840x2160": {
+            "gpu_ms_median": 283.3149,
+            "gpu_ms_p95": 287.0542
+          }
+        }
       },
       "previews": {
         "thumbnail": "thumbnails/liquid-gradient.webp"
@@ -13071,21 +13368,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 8.7,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/oil-slick.webp"
+      }
     },
     {
       "id": "psychedelic-waves",
@@ -13169,7 +13468,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 4.98,
+        "readability_contrast": 4.97,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -13338,21 +13637,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.89,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/matrix-negative-space.webp"
+      }
     },
     {
       "id": "matrix-rain",
@@ -13445,12 +13746,32 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 12.15,
+        "readability_contrast": 12.28,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 63.9619,
+            "gpu_ms_p95": 71.1343
+          },
+          "2560x1440": {
+            "gpu_ms_median": 111.834,
+            "gpu_ms_p95": 119.1426
+          },
+          "3440x1440": {
+            "gpu_ms_median": 153.2227,
+            "gpu_ms_p95": 163.0957
+          },
+          "3840x2160": {
+            "gpu_ms_median": 238.7447,
+            "gpu_ms_p95": 248.7752
+          }
+        }
       },
       "previews": {
         "thumbnail": "thumbnails/matrix-rain.webp",
@@ -13605,21 +13926,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.18,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/black-gold.webp"
+      }
     },
     {
       "id": "brushed-steel",
@@ -14123,7 +14446,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 6.17,
+        "readability_contrast": 6.19,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -14216,15 +14539,36 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 5.7,
+        "readability_contrast": 5.12,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 73.623,
+            "gpu_ms_p95": 83.7868
+          },
+          "2560x1440": {
+            "gpu_ms_median": 135.7704,
+            "gpu_ms_p95": 136.9498
+          },
+          "3440x1440": {
+            "gpu_ms_median": 182.8771,
+            "gpu_ms_p95": 196.0972
+          },
+          "3840x2160": {
+            "gpu_ms_median": 292.2673,
+            "gpu_ms_p95": 308.7075
+          }
+        }
       },
       "previews": {
-        "thumbnail": "thumbnails/liquid-metal.webp"
+        "thumbnail": "thumbnails/liquid-metal.webp",
+        "animated": "previews/liquid-metal.webp"
       }
     },
     {
@@ -14541,21 +14885,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.01,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/obsidian-gloss.webp"
+      }
     },
     {
       "id": "rainbow-chrome",
@@ -14623,21 +14969,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 7.67,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/rainbow-chrome.webp"
+      }
     },
     {
       "id": "rusted-steel",
@@ -14805,7 +15153,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.3,
+        "readability_contrast": 7.26,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -14910,7 +15258,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.23,
+        "readability_contrast": 9.25,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -15087,7 +15435,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 11.44,
+        "readability_contrast": 11.57,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -15191,12 +15539,32 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.69,
+        "readability_contrast": 9.7,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 102.7601,
+            "gpu_ms_p95": 108.6629
+          },
+          "2560x1440": {
+            "gpu_ms_median": 184.8821,
+            "gpu_ms_p95": 199.4074
+          },
+          "3440x1440": {
+            "gpu_ms_median": 254.0847,
+            "gpu_ms_p95": 260.9013
+          },
+          "3840x2160": {
+            "gpu_ms_median": 431.598,
+            "gpu_ms_p95": 458.165
+          }
+        }
       },
       "previews": {
         "thumbnail": "thumbnails/ender-portal.webp",
@@ -15284,7 +15652,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 11.9,
+        "readability_contrast": 11.98,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -15478,7 +15846,8 @@
         "status": "not-benchmarked"
       },
       "previews": {
-        "thumbnail": "thumbnails/nether-portal.webp"
+        "thumbnail": "thumbnails/nether-portal.webp",
+        "animated": "previews/nether-portal.webp"
       }
     },
     {
@@ -15554,7 +15923,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 10.4,
+        "readability_contrast": 10.55,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -15824,7 +16193,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.05,
+        "readability_contrast": 7.36,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -15984,21 +16353,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 10.1,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/acid-rain.webp"
+      }
     },
     {
       "id": "bioluminescent-fungi",
@@ -16078,21 +16449,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.83,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/bioluminescent-fungi.webp"
+      }
     },
     {
       "id": "blizzard",
@@ -16349,21 +16722,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.23,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/crystal-cave.webp"
+      }
     },
     {
       "id": "cybernetic-vines",
@@ -16441,21 +16816,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.12,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/cybernetic-vines.webp"
+      }
     },
     {
       "id": "desert-heat",
@@ -16530,7 +16907,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 4.7,
+        "readability_contrast": 4.74,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -16616,21 +16993,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 9.92,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/drizzle-trails.webp"
+      }
     },
     {
       "id": "fog",
@@ -16708,7 +17087,27 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 101.5657,
+            "gpu_ms_p95": 106.3894
+          },
+          "2560x1440": {
+            "gpu_ms_median": 171.7658,
+            "gpu_ms_p95": 175.4258
+          },
+          "3440x1440": {
+            "gpu_ms_median": 238.2826,
+            "gpu_ms_p95": 253.2977
+          },
+          "3840x2160": {
+            "gpu_ms_median": 407.2334,
+            "gpu_ms_p95": 442.0354
+          }
+        }
       },
       "previews": {
         "thumbnail": "thumbnails/fog.webp"
@@ -16787,7 +17186,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.29,
+        "readability_contrast": 7.24,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -17050,21 +17449,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 6.73,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/neon-aurora.webp"
+      }
     },
     {
       "id": "northern-lights",
@@ -17154,10 +17555,31 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 81.4436,
+            "gpu_ms_p95": 84.6149
+          },
+          "2560x1440": {
+            "gpu_ms_median": 157.4959,
+            "gpu_ms_p95": 176.8067
+          },
+          "3440x1440": {
+            "gpu_ms_median": 189.3972,
+            "gpu_ms_p95": 197.661
+          },
+          "3840x2160": {
+            "gpu_ms_median": 322.858,
+            "gpu_ms_p95": 339.8387
+          }
+        }
       },
       "previews": {
-        "thumbnail": "thumbnails/northern-lights.webp"
+        "thumbnail": "thumbnails/northern-lights.webp",
+        "animated": "previews/northern-lights.webp"
       }
     },
     {
@@ -17329,21 +17751,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 7.07,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/sandstorm.webp"
+      }
     },
     {
       "id": "sunrise",
@@ -17427,7 +17851,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.83,
+        "readability_contrast": 7.87,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -17860,21 +18284,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.23,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/digital-ocean.webp"
+      }
     },
     {
       "id": "holographic-waterfall",
@@ -17940,21 +18366,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 6.0,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/holographic-waterfall.webp"
+      }
     },
     {
       "id": "liquid-surface",
@@ -18028,7 +18456,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.93,
+        "readability_contrast": 8.15,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -18241,10 +18669,31 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 130.1116,
+            "gpu_ms_p95": 137.3752
+          },
+          "2560x1440": {
+            "gpu_ms_median": 217.6289,
+            "gpu_ms_p95": 226.1855
+          },
+          "3440x1440": {
+            "gpu_ms_median": 290.6992,
+            "gpu_ms_p95": 302.3124
+          },
+          "3840x2160": {
+            "gpu_ms_median": 503.4264,
+            "gpu_ms_p95": 515.3023
+          }
+        }
       },
       "previews": {
-        "thumbnail": "thumbnails/ocean-waves.webp"
+        "thumbnail": "thumbnails/ocean-waves.webp",
+        "animated": "previews/ocean-waves.webp"
       }
     },
     {
@@ -18339,7 +18788,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 8.86,
+        "readability_contrast": 9.02,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -18443,7 +18892,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 7.43,
+        "readability_contrast": 7.64,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -18631,12 +19080,32 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 5.41,
+        "readability_contrast": 5.46,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 107.5269,
+            "gpu_ms_p95": 112.0807
+          },
+          "2560x1440": {
+            "gpu_ms_median": 177.6044,
+            "gpu_ms_p95": 179.7414
+          },
+          "3440x1440": {
+            "gpu_ms_median": 246.4959,
+            "gpu_ms_p95": 249.7181
+          },
+          "3840x2160": {
+            "gpu_ms_median": 403.3715,
+            "gpu_ms_p95": 407.8814
+          }
+        }
       },
       "previews": {
         "thumbnail": "thumbnails/underwater-caustics.webp"
@@ -18725,7 +19194,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 6.08,
+        "readability_contrast": 6.53,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -18826,7 +19295,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 8.42,
+        "readability_contrast": 9.72,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -19374,7 +19843,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 9.46,
+        "readability_contrast": 9.83,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -19466,7 +19935,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 10.28,
+        "readability_contrast": 10.34,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -19624,21 +20093,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.63,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/nanobot-swarm.webp"
+      }
     },
     {
       "id": "neon-fireflies",
@@ -19715,21 +20186,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.58,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/neon-fireflies.webp"
+      }
     },
     {
       "id": "particle-trails",
@@ -19823,7 +20296,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 11.02,
+        "readability_contrast": 10.99,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -20000,21 +20473,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.74,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/quantum-interference.webp"
+      }
     },
     {
       "id": "quantum-particles",
@@ -20090,7 +20565,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 10.69,
+        "readability_contrast": 10.67,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -20168,21 +20643,23 @@
       ],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 9.62,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/snow-accumulation.webp"
+      }
     },
     {
       "id": "snowfall",
@@ -20616,21 +21093,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.85,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/glowing-runes.webp"
+      }
     },
     {
       "id": "quantum-gateway",
@@ -20799,7 +21278,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 1.09,
+        "readability_contrast": 13.05,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -20883,7 +21362,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 6.42,
+        "readability_contrast": 6.37,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -20977,7 +21456,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 10.01,
+        "readability_contrast": 9.98,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -21144,21 +21623,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 11.93,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/asteroid-field.webp"
+      }
     },
     {
       "id": "aurora-space",
@@ -21339,10 +21820,31 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 71.7598,
+            "gpu_ms_p95": 74.401
+          },
+          "2560x1440": {
+            "gpu_ms_median": 129.1454,
+            "gpu_ms_p95": 138.0148
+          },
+          "3440x1440": {
+            "gpu_ms_median": 190.0565,
+            "gpu_ms_p95": 203.7186
+          },
+          "3840x2160": {
+            "gpu_ms_median": 283.8384,
+            "gpu_ms_p95": 294.3664
+          }
+        }
       },
       "previews": {
-        "thumbnail": "thumbnails/black-hole.webp"
+        "thumbnail": "thumbnails/black-hole.webp",
+        "animated": "previews/black-hole.webp"
       }
     },
     {
@@ -21411,21 +21913,23 @@
       ],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 7.24,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/cmb-noise.webp"
+      }
     },
     {
       "id": "cosmic-dust",
@@ -21574,21 +22078,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.27,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/dark-matter.webp"
+      }
     },
     {
       "id": "eclipse",
@@ -21665,21 +22171,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 10.79,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/eclipse.webp"
+      }
     },
     {
       "id": "event-horizon",
@@ -21840,21 +22348,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 13.14,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/gravitational-waves.webp"
+      }
     },
     {
       "id": "hyperspace-jump",
@@ -21921,21 +22431,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 5.72,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/hyperspace-jump.webp"
+      }
     },
     {
       "id": "lunar-surface",
@@ -22004,21 +22516,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": false,
+        "readability_contrast": 7.44,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/lunar-surface.webp"
+      }
     },
     {
       "id": "meteor-shower",
@@ -22104,7 +22618,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 10.88,
+        "readability_contrast": 10.86,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -22192,7 +22706,27 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 106.4968,
+            "gpu_ms_p95": 108.6985
+          },
+          "2560x1440": {
+            "gpu_ms_median": 191.7326,
+            "gpu_ms_p95": 198.9735
+          },
+          "3440x1440": {
+            "gpu_ms_median": 241.062,
+            "gpu_ms_p95": 252.1606
+          },
+          "3840x2160": {
+            "gpu_ms_median": 401.9725,
+            "gpu_ms_p95": 413.0476
+          }
+        }
       },
       "previews": {
         "thumbnail": "thumbnails/nebula.webp"
@@ -22362,7 +22896,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 11.94,
+        "readability_contrast": 11.81,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -22643,10 +23177,31 @@
         "checked": "2026-10-18"
       },
       "benchmark": {
-        "status": "not-benchmarked"
+        "status": "measured",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "note": "software rasteriser: CPU-bound, use for relative ranking only",
+        "results": {
+          "1920x1080": {
+            "gpu_ms_median": 72.7612,
+            "gpu_ms_p95": 75.9066
+          },
+          "2560x1440": {
+            "gpu_ms_median": 141.7699,
+            "gpu_ms_p95": 144.1184
+          },
+          "3440x1440": {
+            "gpu_ms_median": 181.2625,
+            "gpu_ms_p95": 202.1744
+          },
+          "3840x2160": {
+            "gpu_ms_median": 285.5482,
+            "gpu_ms_p95": 300.849
+          }
+        }
       },
       "previews": {
-        "thumbnail": "thumbnails/starfield.webp"
+        "thumbnail": "thumbnails/starfield.webp",
+        "animated": "previews/starfield.webp"
       }
     },
     {
@@ -22715,21 +23270,23 @@
       "known_limitations": [],
       "attribution": null,
       "platforms": {
-        "linux": "unknown",
+        "linux": "verified",
         "macos": "unknown"
       },
       "verification": {
-        "compile": "unknown",
-        "ghostty_render": "untested",
-        "animates": null,
-        "readability_contrast": null,
-        "ghostty_version": null,
-        "checked": null
+        "compile": "pass",
+        "ghostty_render": "pass",
+        "animates": true,
+        "readability_contrast": 12.59,
+        "ghostty_version": "1.3.1",
+        "checked": "2026-10-18"
       },
       "benchmark": {
         "status": "not-benchmarked"
       },
-      "previews": {}
+      "previews": {
+        "thumbnail": "thumbnails/starship-bridge.webp"
+      }
     },
     {
       "id": "supernova",
@@ -22913,7 +23470,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 10.39,
+        "readability_contrast": 10.46,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },
@@ -23006,7 +23563,7 @@
         "compile": "pass",
         "ghostty_render": "pass",
         "animates": true,
-        "readability_contrast": 6.54,
+        "readability_contrast": 6.65,
         "ghostty_version": "1.3.1",
         "checked": "2026-10-18"
       },

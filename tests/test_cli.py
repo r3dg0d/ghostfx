@@ -1,6 +1,7 @@
 import json
 
 from conftest import needs_glslang
+
 from ghostfx.cli import detect_colorspace, main
 
 
