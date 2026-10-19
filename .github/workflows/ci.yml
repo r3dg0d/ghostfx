@@ -37,7 +37,7 @@ jobs:
         run: ghostfx validate --json > validate-report.json
       - name: Manifest is valid and current
         run: ghostfx manifest --check
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: validate-report-${{ matrix.os }}
