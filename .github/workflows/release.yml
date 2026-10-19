@@ -53,7 +53,7 @@ jobs:
                 f"{ok} rendered in Ghostty {v.get('ghostty_version')} ({v.get('environment')}).")
           print("\nmacOS/Metal: shaders cross-compile to MSL; runtime testing on a Mac is still pending.")
           PY
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           body_path: notes.md
           files: dist-release/*
